@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Spotify Welcome !</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -17,15 +17,158 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/circular-font.css" />
+    <link rel="stylesheet" href="assets/css/welcomepage.css" />
+    <link
+      rel="icon"
+      href="/assets/imgs/Spotify_Icon_Green.svg"
+      type="image/x-icon"
+    />
   </head>
 
-  <body class="bg-black">
-    <header></header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+  <body
+    class="bg-black d-flex justify-content-center align-items-center vh-100"
+  >
+    <main
+      class="d-flex flex-column justify-content-center align-items-center text-center"
+    >
+      <div class="container ms-5 me-5">
+        <div class="container">
+          <img
+            class="loghi img-fluid w-50 w-sm-40 w-md-30 w-lg-25 w-xl-20"
+            src="/assets/imgs/Spotify_Text_Logo.svg"
+            alt="Spotify-Logo"
+          />
+        </div>
+        <h1 class="text-white my-5">Benvenuto sulla piattaforma</h1>
+        <button
+          onclick="nextStep(1)"
+          id="avanti"
+          class="button-go w-25 w-sm-75 w-md-50 w-lg-25"
+        >
+          Avanti
+        </button>
+        <div class="container fixed-bottom pb-5">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <div class="circle active"></div>
+            </div>
+            <div class="col-auto">
+              <div class="circle"></div>
+            </div>
+            <div class="col-auto">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modale Login -->
+      <div
+        class="modal"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="loginModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="loginEmail"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="loginPassword"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modale Registrazione -->
+      <div
+        class="modal"
+        id="registerModal"
+        tabindex="-1"
+        aria-labelledby="registerModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">Registrazione</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="registerForm">
+                <div class="mb-3">
+                  <label for="registerEmail" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="registerEmail"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerPassword" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="registerPassword"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="registerConfirmPassword" class="form-label"
+                    >Conferma Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="registerConfirmPassword"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Registrati
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
