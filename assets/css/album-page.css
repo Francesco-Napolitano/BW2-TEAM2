@@ -47,3 +47,14 @@
 .table th {
   background-color: transparent !important;
 }
+
+@media screen and (max-width: 992px) {
+  thead {
+    display: none;
+  }
+}
+
+.left {
+  position: relative;
+  top: 4em;
+}
