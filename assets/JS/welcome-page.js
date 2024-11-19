@@ -55,9 +55,7 @@ if (
       password
     );
 
-    console.log("Nuovo utente registrato:", JSON.stringify(newUser));
-
-    alert(`Utente registrato con successo!\nNome: ${nome}\nEmail: ${email}`);
+    alert(`Utente registrato con successo !`);
 
     registerForm.reset();
 
@@ -71,12 +69,13 @@ if (
     window.location.href = "../../homepage.html";
   });
 
-  const Utente_Registrato = localStorage.getItem("User");
+  const Utente_Registrato = JSON.parse(localStorage.getItem("User"));
   const login_form = document.getElementById("loginForm");
-  const login_email = document.getElementById("loginEmail").value;
-  const login_pass = document.getElementById("loginPassword").value;
 
   login_form.addEventListener("submit", (event) => {
+    const login_email = document.getElementById("loginEmail").value;
+    const login_pass = document.getElementById("loginPassword").value;
+
     event.preventDefault();
 
     if (
@@ -95,19 +94,16 @@ const change_bg = function () {
   const terzoElement = document.getElementById("terzo");
 
   if (primoElement.classList.contains("active")) {
-    console.log("Elemento con id primo");
     document.documentElement.style.background =
       "linear-gradient(255.55deg, #381a06c9 0%, #181818 100%)";
   }
 
   if (secondoElement.classList.contains("active")) {
-    console.log("Elemento con id secondo");
     document.documentElement.style.background =
       "linear-gradient(255.55deg, #b8afa9c9 0%, #181818 100%)";
   }
 
   if (terzoElement.classList.contains("active")) {
-    console.log("Elemento con id terzo");
     document.documentElement.style.background =
       "linear-gradient(255.55deg, #0d5c06c9 0%, #181818 100%)";
   }
