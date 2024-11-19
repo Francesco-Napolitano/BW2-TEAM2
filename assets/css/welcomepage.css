@@ -4,42 +4,39 @@ html {
 
 body {
   font-family: Circular, sans-serif;
-  transform: scale(0.96);
-  border-radius: 30px;
   transition: background-color 0.8s ease, opacity 0.8s ease;
+  transform: scale(0.97);
 }
 
-.circle {
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: rgba(134, 137, 133, 0.682);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#back-ground-1 {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.container-fluid {
+  --bs-gutter-x: 0rem;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.8s ease;
 }
 
-.active {
-  background-color: white;
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
-}
-
-.circle:hover {
-  background-color: white;
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.col-auto {
-  padding-left: 0px;
-  padding-right: 10px;
-}
-
-.button-go {
+.nextButton {
   border: 0;
   background: rgba(52, 56, 54, 0.636);
   background: linear-gradient(
@@ -48,7 +45,7 @@ body {
     rgb(25, 45, 31) 100%
   );
   height: 40px;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
   font-size: 16px;
   text-transform: uppercase;
@@ -57,7 +54,7 @@ body {
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.button-go:hover {
+.nextButton:hover {
   background: rgb(23, 185, 75);
   background: linear-gradient(
     45deg,
@@ -69,26 +66,20 @@ body {
   transform: translateY(-2px);
 }
 
-.button-go:active {
+.nextButton:active {
   transform: translateY(2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08),
     0 0 5px rgba(23, 185, 75, 0.8);
 }
 
-.modal-header {
-  background-color: #0d5c06c9;
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.modal-content {
   color: white;
-}
-
-.modal-body {
-  background-color: #181818;
-}
-
-.btn-primary {
-  background-color: #23b94b;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #1da93e;
+  background: linear-gradient(220.55deg, #0d0d0dc3 0%, #42403fd5 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
