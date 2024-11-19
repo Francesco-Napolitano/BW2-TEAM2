@@ -17,7 +17,7 @@
     <header class="text-white">
       <nav class="navbar px-4 fixed-bottom justify-content-center">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/homepage.html">
             <div
               class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
             >
@@ -25,7 +25,7 @@
               <p style="font-size: 0.8em" class="m-0">Home</p>
             </div>
           </a>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/search.html">
             <div
               class="d-flex flex-column align-items-center justify-content-center text-white"
             >
@@ -33,7 +33,7 @@
               <p style="font-size: 0.8em" class="m-0">Cerca</p>
             </div>
           </a>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/library.html">
             <div
               class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
             >
@@ -45,15 +45,15 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <h2 class="text-white my-5">Cerca</h2>
-        <form class="d-flex" role="search">
-          <button class="border-0 bg-transparent text-white" type="submit">
+      <div id="SearchContainer" class="container vh-100 d-flex flex-column">
+        <h2 class="text-white mt-4 mb-4">Cerca</h2>
+        <form class="d-flex rounded-3" role="search">
+          <button class="border-0 ms-2 bg-transparent text-white" type="submit">
             <i class="bi bi-search border-0"></i>
           </button>
           <input
             id="search-input"
-            class="form-control me-2 border-0 bg-transparent ps-1 text-white"
+            class="form-control border-0 bg-transparent text-white"
             type="search"
             placeholder="Cosa vuoi ascoltare?"
             aria-label="Search"
@@ -62,7 +62,10 @@
         <h3 class="d-flex justify-content-center text-white mt-4 mb-3 fs-5">
           Sfoglia tutto
         </h3>
-        <row class="row row-cols-2 g-3 justify-content-end">
+        <div
+          id="Category"
+          class="flex-grow-1 row row-cols-2 row-cols-xl-3 g-3 justify-content-end"
+        >
           <div class="col">
             <div
               class="p-2 d-flex justify-content-between text-white position-relative"
@@ -183,7 +186,7 @@
               />
             </div>
           </div>
-        </row>
+        </div>
       </div>
     </main>
     <script
