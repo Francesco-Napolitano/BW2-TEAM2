@@ -1,5 +1,5 @@
 .scrollable-section {
-  max-height: 650px;
+  max-height: 1000px;
   overflow-y: auto;
 }
 
@@ -32,6 +32,18 @@
   box-shadow: 2px 5px 19px 7px rgba(0, 0, 0, 0.68);
 }
 
-.title {
-  margin-top: 7em;
+.song {
+  font-size: 4em;
+}
+
+.table {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+.table tr {
+  background-color: transparent !important;
+}
+.table td,
+.table th {
+  background-color: transparent !important;
 }
