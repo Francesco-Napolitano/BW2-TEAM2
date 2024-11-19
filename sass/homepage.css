@@ -1,0 +1,16 @@
+.custom-button {
+  background-color: #151515;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5em 2em;
+  font-weight: 400;
+  border: none;
+}
+
+.custom-bg-color {
+  background-color: #121212;
+}
+
+#icon-container {
+  width: 30%;
+}/*# sourceMappingURL=homepage.css.map */
