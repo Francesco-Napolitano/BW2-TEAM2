@@ -2,7 +2,7 @@
   background-color: #151515;
   color: white;
   border-radius: 20px;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   font-weight: 400;
   border: none;
 }
@@ -13,4 +13,16 @@
 
 #icon-container {
   width: 30%;
+  flex-basis: 35%;
+}
+
+.row .col > div {
+  background-color: #151515;
+}
+.row .col > div img {
+  width: 30%;
+}
+
+.col div > p {
+  font-size: 1em;
 }/*# sourceMappingURL=homepage.css.map */
