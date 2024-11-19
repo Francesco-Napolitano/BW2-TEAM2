@@ -1,0 +1,68 @@
+main form{
+   background-color: #151515;
+}
+
+#search-input::placeholder{
+   color: white;
+   
+}
+/* NAVBAR MOBILE */
+
+header > nav{
+   background: rgb(0,0,0);
+   background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0.8157387955182073) 100%);
+   margin-left: 10px;
+} 
+
+/* NAVBAR MOBILE */
+
+.col img{
+   width: 36%;
+    object-fit: contain;
+    transform: rotate(22deg); 
+    right: -18px;
+    border-radius: 10px;    
+   }
+
+   main .col>div{
+      overflow: hidden;
+      font-weight: 500;
+      height: 5.6em;
+      border-radius: 3px;
+
+   }
+
+
+   main .col:nth-of-type(1) > div {
+   background-color: #f54014;
+}
+main .col:nth-of-type(2) > div {
+   background-color: #233260;
+}
+main .col:nth-of-type(3) > div {
+   background-color: #de295a;
+}
+main .col:nth-of-type(4) > div {
+   background-color: green;
+}
+main .col:nth-of-type(5) > div {
+   background-color: #c90000;
+}
+main .col:nth-of-type(6) > div {
+   background-color: #f54014;
+}
+main .col:nth-of-type(7) > div {
+   background-color: #de295a;
+}
+main .col:nth-of-type(8) > div {
+   background-color: #795f96;
+}
+
+main .col:nth-of-type(9) > div {
+   background-color: #03af00;
+}
+
+main .col:nth-of-type(10) > div {
+   background-color: #49019c;
+}
+
