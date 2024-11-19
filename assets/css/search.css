@@ -3,15 +3,18 @@ main form{
 }
 
 #search-input::placeholder{
-   color: gray;
+   color: white;
    
 }
+/* NAVBAR MOBILE */
 
 header > nav{
    background: rgb(0,0,0);
-   background: linear-gradient(0deg, rgba(0,0,0,1) 28%, rgba(0,0,0,0.5412289915966386) 100%);
+   background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0.8157387955182073) 100%);
+   margin-left: 10px;
+} 
 
-}
+/* NAVBAR MOBILE */
 
 .col img{
    width: 36%;
