@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Spotify - Profile</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,11 +16,21 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="50x50"
+      href="/assets/imgs/Spotify_Icon_Green.svg"
+    />
+    <link rel="stylesheet" href="/assets/css/circular-font.css" />
+    <link rel="stylesheet" href="/assets/css/profilepage.css" />
   </head>
 
-  <body>
+  <body class="text-white">
     <header>
-      <nav class="navbar px-4 opacity-75 fixed-bottom justify-content-center">
+      <nav
+        class="navbar px-4 opacity-75 fixed-bottom justify-content-center bg-black"
+      >
         <div class="container">
           <a class="navbar-brand" href="#">
             <div
@@ -48,23 +58,85 @@
           </a>
         </div>
       </nav>
-      <div class="card" style="width: 18rem">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+    </header>
+    <main class="d-flex flex-column">
+      <div
+        class="container-fluid d-flex justify-content-between flex-grow-0 px-3 px-md-5 pt-4"
+      >
+        <div class="bg-icon bg-black">
+          <i
+            onclick="window.location.href = '/welcome-page.html';"
+            class="bi bi-arrow-left fs-1"
+          ></i>
+        </div>
+        <div class="dropdown bg-icon bg-black">
+          <i
+            class="bi bi-gear fs-1"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          ></i>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item bg-transparent" onclick="Modifica()"
+                >Modifica</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+
+      <div
+        class="container text-center mt-4 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="rounded-circle overflow-hidden mx-auto"
+          style="width: 120px; height: 120px"
+        >
+          <img
+            id="ProfileImg"
+            src="/assets/imgs/profile-icon.svg"
+            alt="Profile"
+            class="img-fluid w-100 h-100"
+          />
+        </div>
+      </div>
+
+      <h1 class="text-center my-5">Impostazioni Profilo :</h1>
+      <div class="container d-flex flex-column justify-content-center pt-lg-5">
+        <ul class="list-group list-group-flush">
+          <div class="row">
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">
+              Nome :
+            </li>
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">
+              Cognome :
+            </li>
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">
+              Sesso :
+            </li>
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">
+              Età :
+            </li>
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">
+              Paese :
+            </li>
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">
+              Email :
+            </li>
+          </div>
+        </ul>
+      </div>
+      <button
+        onclick="Esci()"
+        id="esci"
+        type="button"
+        class="btn btn-lg mt-4 mx-auto d-block col-6 col-lg-2"
+      >
+        Esci
+      </button>
+    </main>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

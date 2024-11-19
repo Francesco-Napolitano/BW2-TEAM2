@@ -1,0 +1,81 @@
+body {
+  background: linear-gradient(220.55deg, #100e0e 0%, #0f0f0f 100%);
+}
+
+main {
+  height: calc(
+    100vh - 95px
+  ); 
+  overflow-y: auto;
+}
+
+#esci,
+#save-button {
+  color: white;
+  border: 0;
+  background: linear-gradient(220.55deg, #5f5a5a 0%, #141414 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#esci:hover {
+  color: white;
+  scale: 1.1;
+  box-shadow: 0 0 15px 5px rgba(230, 29, 29, 0.404);
+}
+
+#save-button:hover {
+  color: white;
+  scale: 1.01;
+  box-shadow: 0 0 15px 5px #0d8309ab;
+}
+
+.list-group-item {
+  font-size: large;
+  color: white;
+  border: 0;
+  background: linear-gradient(220.55deg, #31313152 0%, #28252589 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.bg-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.bg-icon:hover {
+  color: white;
+  scale: 1.2;
+  box-shadow: 0 0 15px 5px #0d8309ab;
+}
+
+.bg-icon i:hover {
+  color: green;
+  cursor: pointer;
+}
+
+select {
+  background-color: #282525d2;
+  border: 0;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+select:focus {
+  border: 0;
+  outline: none;
+}
+
+option {
+  border: 0;
+  background-color: #282525d2;
+  color: white;
+}
