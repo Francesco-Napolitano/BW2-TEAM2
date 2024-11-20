@@ -19,26 +19,27 @@
   <body class="custom-bg-color">
     <header>
       <nav
-        class="navbar px-4 opacity-75 fixed-bottom justify-content-center bg-black"
+        class="navbar px-4 fixed-bottom justify-content-center d-lg-none"
+        style="bottom: -2px"
       >
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center text-white"
-            >
-              <i class="bi bi-house-door-fill fs-1"></i>
-              <p style="font-size: 0.8em" class="m-0">Home</p>
-            </div>
-          </a>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/homepage.html">
             <div
               class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
             >
-              <i class="bi bi-search fs-1"></i>
+              <i class="bi bi-house-door fs-1"></i>
+              <p style="font-size: 0.8em" class="m-0">Home</p>
+            </div>
+          </a>
+          <a class="navbar-brand" href="/search.html">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center text-white"
+            >
+              <i class="bi bi-search fs-1 fw-bold"></i>
               <p style="font-size: 0.8em" class="m-0">Cerca</p>
             </div>
           </a>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/library.html">
             <div
               class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
             >
@@ -49,7 +50,33 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="pb-5 mb-4">
+      <div class="container d-sm-none d-lg-inline">
+        <div class="row custom-album-container col-lg-9">
+          <div class="col col-12">
+            <div
+              class="card flex-row px-2 py-3 custom-bg-gradient d-none d-lg-flex"
+            >
+              <img
+                src="./assets/imgs/main/image-9.jpg"
+                class="card-img-top w-25"
+                alt="..."
+              />
+              <div class="card-body text-white">
+                <p>ALBUM</p>
+                <h5 class="card-title fs-1">VIOLA (feat.Salmo)</h5>
+                <p class="card-text">Fedez, Salmo</p>
+                <p class="card-text">
+                  Ascolta il nuovo singolo di Fedez e Salmo
+                </p>
+                <button class="top-album-button">Play</button>
+                <button class="top-album-button">Salva</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section class="container mb-4">
         <div class="row">
           <div
@@ -116,51 +143,120 @@
       </section>
       <section>
         <div class="container">
-          <div class="row justify-content-center align-items-center my-4 gap-4">
-            <div class="col-12">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="row row-cols-1 row-cols-lg-5 justify-content-center align-items-center my-4 gap-4">
+            <div class="col">
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://t3.ftcdn.net/jpg/02/97/00/28/360_F_297002806_sGFgV1oPMgeuRfAJpgF01p3RduNGDIxw.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> study and work space</p>
+                </div>
+                <div class="d-flex justify-content-between fs-3 align-items-center">
+                  <div>
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">16 brani</span> <i class="bi bi-play-circle"></i>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://www.cygnusmusic.net/wp-content/uploads/2023/06/This-Is-Playlist.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> This is Snoop Dogg</p>
+                </div>
+                <div class="d-flex justify-content-between fs-3 align-items-center">
+                  <div>
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">30 brani</span> <i class="bi bi-play-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col">
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c41cb99a5051e4b1034622284"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> Best of Rolling Stones</p>
+                </div>
+                <div class="d-flex justify-content-between fs-3 align-items-center">
+                  <div>
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">20 brani</span> <i class="bi bi-play-circle"></i>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://i1.sndcdn.com/artworks-zWFpCflzYN8yyAZQ-xMXzlw-t500x500.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> Alternative rock mix</p>
+                </div>
+                <div class="d-flex justify-content-between fs-3 align-items-center">
+                  <div>
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">44 brani</span> <i class="bi bi-play-circle"></i>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="col">
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://cdn-d.smehost.net/sites/eca8caccee084ea1a6d20780b8091381/wp-content/uploads/2022/12/degregori.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> Canzoni anni 70'</p>
+                </div>
+                <div class="d-flex justify-content-between fs-3 align-items-center">
+                  <div>
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">28 brani</span> <i class="bi bi-play-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
