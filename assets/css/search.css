@@ -76,6 +76,14 @@ main .col:nth-of-type(10) > div {
   background-color: #49019c;
 }
 
+main .col:nth-of-type(11) > div {
+  background-color: #233260;
+}
+
+main .col:nth-of-type(12) > div {
+  background-color: red;
+}
+
 .card {
   border-radius: 15px;
   border: 0;
