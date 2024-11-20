@@ -7,6 +7,38 @@
   border: none;
 }
 
+.top-album-button {
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  :hover {
+    color: black;
+    background-color: #1ed760;
+  }
+}
+
+.custom-album-container {
+  margin: 0 15rem;
+  @media (min-width: 992px) {
+    margin: 0 5rem;
+  }
+  @media (min-width: 1350px) {
+    margin: 0 10rem;
+  }
+}
+
+.custom-bg-gradient {
+  background: rgb(30, 30, 30);
+  background: linear-gradient(
+    198deg,
+    rgba(30, 30, 30, 1) 14%,
+    rgba(0, 0, 0, 1) 64%
+  );
+}
+
 .custom-bg-color {
   background-color: #121212;
 }
@@ -20,11 +52,12 @@
   .col > {
     div {
       background-color: #151515;
-      img {
-        width: 30%;
-      }
     }
   }
+}
+
+article img {
+  width: 30%;
 }
 
 .col {
@@ -33,6 +66,21 @@
       font-size: 1em;
     }
   }
+}
+
+.images-playlist {
+  width: 11em;
+  height: 11em;
+  -webkit-box-shadow: -1px -1px 12px -2px #ffffff;
+  box-shadow: -1px -1px 12px -2px #ffffff;
+}
+
+div > span {
+  font-size: 0.8em;
+}
+
+#top-album {
+  width: 85vw;
 }
 
 // .side-text {
