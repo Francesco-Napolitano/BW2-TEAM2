@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Album</title>
+    <title>Spotify - AlbumPage</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -33,7 +33,7 @@
   <body>
     <header>
       <nav
-        class="d-lg-none navbar px-4 opacity-75 fixed-bottom justify-content-center m-0"
+        class="d-lg-none navbar px-4 bg-transparent fixed-bottom justify-content-center m-0"
       >
         <div class="container">
           <a class="navbar-brand" href="homepage.html">
@@ -66,287 +66,243 @@
     <main>
       <div class="container-fluid">
         <div class="row">
-          <div class="d-none d-lg-block col-lg-3 bg-dark">
-            <div class="p-3">
-              <ul class="list-unlysted p-0">
-                <li>
-                  <i class="bi bi-three-dots text-light"></i>
-                </li>
-                <li>
-                  <i class="bi bi-house-door-fill fs-4 text-light"></i>
+          <div
+            id="colonna-sinistra"
+            class="d-none d-xl-block col-xl-3"
+            style="height: 100vh; overflow: auto"
+          >
+            <div class="p-4">
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-house-door-fill fs-4 text-light pe-3"></i>
                   <a
                     href="homepage.html"
-                    class="text-light text-decoration-none"
+                    class="text-light text-decoration-none fs-5"
                     >Home</a
                   >
                 </li>
-                <li>
-                  <i class="bi bi-search fs-4 text-light"></i>
-                  <a href="search.html" class="text-light text-decoration-none"
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-search fs-4 text-light pe-3"></i>
+                  <a
+                    href="search.html"
+                    class="text-light text-decoration-none fs-5"
                     >Cerca</a
                   >
                 </li>
-                <li>
-                  <i class="bi bi-collection-play fs-4 text-light"></i>
-                  <a href="library.html" class="text-light text-decoration-none"
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-collection-play fs-4 text-light pe-3"></i>
+                  <a
+                    href="library.html"
+                    class="text-light text-decoration-none fs-5"
                     >La tua libreria</a
                   >
                 </li>
-                <li></li>
-                <li></li>
-                <li>
-                  <i class="bi bi-plus-lg text-light bg-secondary p-1"></i
-                  ><a class="text-light text-decoration-none p-1" href="#"
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center p-2 me-3 fs-5"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  >
+                    <i class="bi bi-plus-lg text-black text-light fs-4"></i>
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
                     >Crea la tua Playlist</a
                   >
                 </li>
-                <li class="mt-3">
-                  <img
-                    src="./assets/imgs/liked song.png"
-                    width="24px"
-                    alt="liked song"
-                  />
-                  <a class="text-light text-decoration-none" href="#"
+
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center p-2 me-3"
+                    style="
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      overflow: hidden;
+                    "
+                  >
+                    <img
+                      src="./assets/imgs/liked song.png"
+                      alt="liked song"
+                      style="height: 200%; object-fit: cover"
+                    />
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
                     >Brani che ti piacciono</a
                   >
                 </li>
-                <li class="mt-3">
-                  <i class="bi bi-bookmark bg-success p-1"></i>
-                  <a class="text-light text-decoration-none" href="#"
+
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-success d-flex align-items-center justify-content-center p-2 me-3 fs-5"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  >
+                    <i class="bi bi-bookmark text-black fs-4"></i>
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
                     >I tuoi episodi</a
                   >
                 </li>
               </ul>
-              <hr class="text-secondary" />
-              <div class="scrollable-section">
-                <ul class="list-unlysted p-0">
-                  <li>
-                    <a class="text-light text-decoration-none" href="#">
-                      early stage emily sindrome (sett-ott 2024)
-                    </a>
+              <hr class="text-white my-4" />
+              <div
+                class="scrollable-section"
+                style="max-height: calc(100vh - 200px); overflow-y: auto"
+              >
+                <ul class="list-unstyled mb-0">
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="early stage"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎸</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Early Stage - Indie Rock</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Be the Young
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="be the young"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎤</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Be the Young - Alt Rock</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      *...* cit. Kimiko (lug-ago 2024)
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="kimiko vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎶</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Kimiko Vibes - Indie Pop</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      saggio vibes 🩰💃
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="saggio vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🕺</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Saggio Vibes - Afrobeat</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Main character energy (mag-giu 2024)
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="main character"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌟</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Main Character - Pop</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      that fucking mood🔪🔪
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="that mood"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🔪</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >That Mood - Trap</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      VEE,CARLOTTA E GIACOMO VANNO A BOSIO
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="veecarlotta"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎧</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Vee & Carlotta - Hip-Hop</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      An Emily Winchester kind of mood 🔪🖕
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="emily winchester"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">💀</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Emily Winchester - Dark Pop</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      landing page (mar-apr 2024)
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="landing page"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌌</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Landing Page - Experimental</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      2021 lol
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="2021 lol"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎉</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >2021 LOL - Mashup</a
+                    >
                   </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      cosa cazzo vuol dire questa affermazione &#40;gen-fe...
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      honey and glass (nov-dic 2021)
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      (Revenge) Training Arc 🦍
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Lidia 🤝 Emily
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Minecraft e nintendo switch (sep-oct 2023)
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      silvano d'orba? i hardly know her (lug - ago 2023)
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Culo 2021
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Frah Quintale Mix
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Francesco Guccini Mix
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Tutti i miei mood
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Hard Rock 💀
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Musica classica 🎼
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Non so cosa ascoltare
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      canzoni da impiccagione🥀💔
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Sanremo 2024
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      TruceKlan
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Feste di compleanno🎉
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Amore🩵
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Drive🚗
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      MJ👩‍🎤
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Sigle anime🎌
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Canzoni noiose
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Non ascoltare mai più❌
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      prossimi concerti
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Work In Progress
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Solitudine
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Animo della festa
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Spanish
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Discoteca🪩🕺
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      canzoni da cantare🎤
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      le nostre preferite
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      scuola
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Sport
-                    </a>
-                  </li>
-                  <li class="mt-2">
-                    <a class="text-light text-decoration-none" href="#">
-                      Live stadio🏟️
-                    </a>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="/assets/imgs/music_party.jpg"
+                      alt="honeys and glass"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🍯</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Honey & Glass - Chillwave</a
+                    >
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col col-lg-7 album">
-            <i class="bi bi-arrow-left fs-4 text-white left d-lg-none mt-5"></i>
-            <div class="mt-3 d-none d-lg-flex justify-content-between">
+
+          <div class="col col-xl-7 album pt-2">
+            <div class="container-fluid">
+              <i
+                class="bi bi-arrow-left fs-2 bg-transparent text-white left d-lg-none pt-2"
+              ></i>
+            </div>
+            <div class="mt-3 mb-4 d-none d-lg-flex justify-content-between">
               <div>
                 <i class="bi bi-arrow-left-circle-fill fs-2"></i
                 ><i class="bi bi-arrow-right-circle-fill fs-2 m-3"></i>
@@ -354,64 +310,81 @@
 
               <div class="dropdown">
                 <button
-                  class="btn btn-dark badge rounded-pill dropdown-toggle"
+                  class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  style="padding: 8px 15px; margin-right: 15px"
                 >
                   <img
                     src="./assets/imgs/user 4.webp"
                     class="rounded-circle"
                     width="25px"
-                    alt=""
+                    height="25px"
+                    alt="User Avatar"
+                    style="margin-right: 10px"
                   />
                   Lidia Nautilus
                 </button>
-                <ul class="dropdown-menu bg-dark">
+
+                <ul
+                  class="dropdown-menu bg-dark border-0 shadow-lg"
+                  style="min-width: 200px"
+                >
                   <li>
-                    <a class="dropdown-item text-light" href="#">
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="#"
+                    >
                       <img
                         src="./assets/imgs/user5.jpg"
                         class="rounded-circle"
                         width="20px"
                         height="20px"
-                        alt=""
+                        alt="Emily Paris"
+                        style="margin-right: 10px"
                       />
-                      Emily paris</a
-                    >
+                      Emily Paris
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-light" href="#">
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="#"
+                    >
                       <img
                         src="./assets/imgs/user6.webp"
                         class="rounded-circle"
                         width="20px"
                         height="20px"
-                        alt=""
+                        alt="Sam Scott"
+                        style="margin-right: 10px"
                       />
-                      Sam Scott</a
-                    >
+                      Sam Scott
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item text-light" href="#">
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="#"
+                    >
                       <img
                         src="./assets/imgs/user7.jpg"
                         class="rounded-circle"
                         width="20px"
                         height="20px"
-                        alt=""
+                        alt="New XXX"
+                        style="margin-right: 10px"
                       />
-                      New XXX</a
-                    >
+                      New User
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="container mt-5">
+            <div class="container">
               <div class="row align-items-center">
-                <div
-                  class="col-12 col-lg-4 mt-5 ms-3 text-center text-lg-start"
-                >
+                <div class="col-12 col-lg-4 text-center">
                   <img
                     src="./assets/imgs/gioventu brucata.jpg"
                     class="img-fluid w-75 rounded shadowCover"
@@ -419,29 +392,30 @@
                   />
                 </div>
 
-                <div class="col-12 col-lg-7 mt-5">
+                <div class="col-12 col-lg-7 mt-3">
                   <div class="text-white">
-                    <!-- Titolo album -->
                     <h6 class="text-uppercase d-none d-lg-block">Album</h6>
                     <div id="title"></div>
                     <h1 class="fw-bold text-light mt-3 display-4">
                       Gioventù brucata
                     </h1>
-                    <!-- Info dell'album -->
-                    <div class="d-flex align-items-center mt-4">
+                    <div class="d-flex align-items-center mt-3">
                       <img
                         src="./assets/imgs/pinguini.jpeg"
                         class="rounded-circle me-3"
-                        width="30"
-                        height="30"
+                        width="50"
+                        height="50"
                         alt="Pinguini Tattici Nucleari"
                       />
                       <div>
                         <p class="fs-6 mb-0 d-lg-none">
                           Pinguini Tattici Nucleari
                         </p>
-                        <p class="d-lg-none text-secondary">
-                          Album &middot; 2017
+                        <p
+                          class="d-lg-none text-white"
+                          style="margin-bottom: 0px"
+                        >
+                          Album · 2017
                         </p>
                         <p class="mb-0 d-none d-lg-block">
                           Pinguini Tattici Nucleari &middot; 2017 &middot; 12
@@ -455,380 +429,185 @@
             </div>
             <hr class="d-none d-lg-block" />
             <div
-              class="d-flex d-lg-none align-items-center justify-content-between"
+              class="d-flex align-items-center justify-content-end mx-3 mx-xl-5 pt-xl-4"
             >
-              <div>
-                <i class="bi bi-suit-heart fs-3 m-3"></i>
-                <i class="bi bi-arrow-down-circle fs-3 m-3"></i>
-                <i class="bi bi-three-dots fs-3 m-3"></i>
-              </div>
-
-              <div>
-                <i class="bi bi-shuffle fs-4"></i>
-                <button
-                  class="rounded-circle bg-success ms-4 border border-success ps-3 pe-3 pt-1 pb-1"
-                >
-                  <i class="bi bi-play-fill fs-3"></i>
+              <div id="option-button">
+                <button class="rounded-circle border-0">
+                  <i class="bi bi-shuffle fs-2"></i>
+                </button>
+                <button class="rounded-circle border-0">
+                  <i class="bi bi-play-fill fs-2"></i>
                 </button>
               </div>
             </div>
-            <div class="d-none d-lg-flex align-items-center">
-              <button
-                class="rounded-circle bg-success ms-4 border border-success ps-3 pe-3 pt-1 pb-1"
+
+            <div class="row">
+              <div
+                class="d-none d-xl-block brano-container d-flex justify-content-between align-items-center mx-lg-5 text-white"
               >
-                <i class="bi bi-play-fill fs-3"></i>
-              </button>
-              <i class="bi bi-suit-heart fs-3 m-3"></i>
-              <i class="bi bi-arrow-down-circle fs-3 m-3"></i>
-              <i class="bi bi-three-dots fs-3 m-3"></i>
-            </div>
-            <div class="row mt-4">
+                <h1 class="">Brani Presenti Nell'Album :</h1>
+              </div>
+              <h1></h1>
               <div class="col-12">
-                <table class="table table-borderless">
-                  <thead>
-                    <tr>
-                      <th class="text-secondary fw-normal" scope="col">#</th>
-                      <th class="text-secondary fw-normal" scope="col">
-                        TITOLO
-                      </th>
-                      <th class="text-secondary fw-normal" scope="col">
-                        RIPRODUZIONI
-                      </th>
-                      <th class="text-secondary" scope="col">
-                        <i class="bi bi-clock"></i>
-                      </th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">1</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Montanelli - Intro</strong
-                        ><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">694.578</td>
-                      <td class="d-none d-lg-table-cell text-light">1:28</td>
-                    </tr>
-
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-                    <tr
-                      class="song-row d-lg-table-row d-flex flex-column flex-lg-row"
-                    >
-                      <td class="d-none d-lg-table-cell text-light">2</td>
-                      <td class="d-lg-table-cell">
-                        <strong class="text-light">Sciarè</strong><br />
-                        <div class="d-flex justify-content-between">
-                          <small class="text-light"
-                            >Pinguini Tattici Nucleari</small
-                          >
-                          <i
-                            class="bi bi-three-dots-vertical fs-4 text-light d-lg-none"
-                          ></i>
-                        </div>
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">
-                        5.585.178
-                      </td>
-                      <td class="d-none d-lg-table-cell text-light">4:41</td>
-                    </tr>
-
-                    <!-- Altre righe -->
-                  </tbody>
-                </table>
+                <div
+                  class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white"
+                >
+                  <div>
+                    <h1 class="fs-4 fw-semibold" style="margin-bottom: 0px">
+                      Montanelli-Intro
+                    </h1>
+                    <p>Pinguini Tattici Nucleari</p>
+                  </div>
+                  <label class="heart-label mb-3 me-2">
+                    <input type="checkbox" class="heart-checkbox" hidden />
+                    <i class="heart-icon bi bi-suit-heart fs-2"></i>
+                  </label>
+                </div>
+                <div
+                  class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white"
+                >
+                  <div>
+                    <h1 class="fs-4 fw-semibold" style="margin-bottom: 0px">
+                      Montanelli-Intro
+                    </h1>
+                    <p>Pinguini Tattici Nucleari</p>
+                  </div>
+                  <label class="heart-label mb-3 me-2">
+                    <input type="checkbox" class="heart-checkbox" hidden />
+                    <i class="heart-icon bi bi-suit-heart fs-2"></i>
+                  </label>
+                </div>
+                <div
+                  class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white"
+                >
+                  <div>
+                    <h1 class="fs-4 fw-semibold" style="margin-bottom: 0px">
+                      Montanelli-Intro
+                    </h1>
+                    <p>Pinguini Tattici Nucleari</p>
+                  </div>
+                  <label class="heart-label mb-3 me-2">
+                    <input type="checkbox" class="heart-checkbox" hidden />
+                    <i class="heart-icon bi bi-suit-heart fs-2"></i>
+                  </label>
+                </div>
+                <div
+                  class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white"
+                >
+                  <div>
+                    <h1 class="fs-4 fw-semibold" style="margin-bottom: 0px">
+                      Montanelli-Intro
+                    </h1>
+                    <p>Pinguini Tattici Nucleari</p>
+                  </div>
+                  <label class="heart-label mb-3 me-2">
+                    <input type="checkbox" class="heart-checkbox" hidden />
+                    <i class="heart-icon bi bi-suit-heart fs-2"></i>
+                  </label>
+                </div>
+                <div
+                  class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white"
+                >
+                  <div>
+                    <h1 class="fs-4 fw-semibold" style="margin-bottom: 0px">
+                      Montanelli-Intro
+                    </h1>
+                    <p>Pinguini Tattici Nucleari</p>
+                  </div>
+                  <label class="heart-label mb-3 me-2">
+                    <input type="checkbox" class="heart-checkbox" hidden />
+                    <i class="heart-icon bi bi-suit-heart fs-2"></i>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
-          <div class="d-none d-lg-block col-lg-2 bg-dark">
-            <div class="d-flex justify-content-between align-items-center mt-4">
-              <h4 class="text-light">Attività amici</h4>
-              <div>
-                <i class="bi bi-person-plus text-light fs-5"></i>
-                <i class="bi bi-x-lg text-light fs-5"></i>
+
+          <div id="colonna-destra" class="d-none d-xl-block col-xl-2">
+            <div class="p-4">
+              <div
+                class="d-flex justify-content-between align-items-center mt-4"
+              >
+                <h4 class="text-light">Attività amici</h4>
+                <div>
+                  <i class="bi bi-person-plus text-light fs-5 me-4"></i>
+                  <i class="bi bi-x-lg text-light fs-5"></i>
+                </div>
               </div>
-            </div>
-            <div class="mt-5 d-flex justify-content-between">
-              <img
-                src="./assets/imgs/user1.webp"
-                class="rounded-circle"
-                width="40px"
-                height="40px"
-                alt=""
-              />
-              <div class="text-white fs-6">
-                <h6>Charlie Hookham</h6>
-                <p>In Camera · Yumi Zouma</p>
-                <p><i class="bi bi-pause-circle"></i> EP III</p>
+              <hr class="text-white my-4" />
+              <div
+                class="scrollable-section"
+                style="max-height: calc(100vh - 200px); overflow-y: auto"
+              >
+                <ul class="list-unstyled mb-0">
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user1.webp"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">Charlie Hookham</h6>
+                        <p class="mb-1">In Camera · Yumi Zouma</p>
+                        <p><i class="bi bi-pause-circle"></i> EP III</p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">4 ore</p>
+                  </li>
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user 2.jpg"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">lightdark02</h6>
+                        <p class="mb-1">Aimed to kill · Jade LeMac</p>
+                        <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">8 ore</p>
+                  </li>
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user 3.jpeg"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">Valeria Traverso</h6>
+                        <p class="mb-1">New Kings · Sleeping wolf</p>
+                        <p>
+                          <i class="bi bi-music-note-beamed"></i> Twist bedass
+                          mood
+                        </p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">4 ore</p>
+                  </li>
+                </ul>
               </div>
-              <p class="hour text-light">4 ore</p>
-            </div>
-            <div class="mt-3 d-flex justify-content-between">
-              <img
-                src="./assets/imgs/user 2.jpg"
-                class="rounded-circle"
-                width="40px"
-                height="40px"
-                alt=""
-              />
-              <div class="text-white fs-6">
-                <h6>lightdark02</h6>
-                <p>Aimed to kill · Jade LeMac</p>
-                <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
-              </div>
-              <p class="hour text-light">8 ore</p>
-            </div>
-            <div class="mt-3 d-flex justify-content-between">
-              <img
-                src="./assets/imgs/user 3.jpeg"
-                class="rounded-circle"
-                width="40px"
-                height="40px"
-                alt=""
-              />
-              <div class="text-white fs-6">
-                <h6>Valeria Traverso</h6>
-                <p>New Kings · Sleeping wolf</p>
-                <p><i class="bi bi-music-note-beamed"></i> Twist bedass mood</p>
-              </div>
-              <p class="hour text-light">4 ore</p>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
