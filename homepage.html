@@ -50,17 +50,17 @@
         </div>
       </nav>
     </header>
-    <main class="pb-5 mb-4">
+    <main class="pb-5 mb-4 mb-lg-0 pb-lg-2">
       <div class="container d-sm-none d-lg-inline">
-        <div class="row custom-album-container col-lg-9">
+        <div id="top-album" class="row custom-album-container col-lg-9">
           <div class="col col-12">
             <div
               class="card flex-row px-2 py-3 custom-bg-gradient d-none d-lg-flex"
             >
               <img
-                src="./assets/imgs/main/image-9.jpg"
+                src="https://kisskiss.it/wp-content/uploads/2022/10/fedez_salmo_viola_cover-jpg-scaled.jpg"
                 class="card-img-top w-25"
-                alt="..."
+                alt="poster-film"
               />
               <div class="card-body text-white">
                 <p>ALBUM</p>
@@ -80,16 +80,16 @@
       <section class="container mb-4">
         <div class="row">
           <div
-            class="col col-12 d-flex align-items-center justify-content-between mt-5"
+            class="col col-12 d-flex align-items-center justify-content-between mt-3"
           >
             <h1 class="text-white">Buonasera</h1>
             <div
               class="fs-1 fw-bold text-white d-flex justify-content-between"
               id="icon-container"
             >
-              <i class="bi bi-bell"></i>
-              <i class="bi bi-stopwatch"></i>
-              <i class="bi bi-gear"></i>
+              <i class="bi bi-bell d-lg-none"></i>
+              <i class="bi bi-stopwatch d-lg-none"></i>
+              <i class="bi bi-gear d-lg-none"></i>
             </div>
           </div>
         </div>
@@ -102,38 +102,38 @@
       </section>
       <section class="container">
         <article class="row g-2">
-          <div class="col col-6">
+          <div class="col col-6 col-lg-4">
             <div class="text-white d-flex align-items-center">
               <img src="./assets/imgs/search/image-1.jpeg" alt="" />
-              <p class="ms-2 mb-0">early stage emily syndr...</p>
+              <p class="ms-2 mb-0">Your discover weekly</p>
             </div>
           </div>
-          <div class="col col-6">
+          <div class="col col-6 col-lg-4">
             <div class="d-flex align-items-center text-white">
               <img src="./assets/imgs/search/image-10.jpg" alt="" />
-              <p class="ms-2 mb-0">saggio vibes 💃🪩🩰</p>
+              <p class="ms-2 mb-0">saggio vibes 💃🩰</p>
             </div>
           </div>
-          <div class="col col-6">
+          <div class="col col-6 col-lg-4">
             <div class="d-flex align-items-center text-white">
               <img src="./assets/imgs/search/image-11.jpg" alt="" />
               <p class="ms-2 mb-0">2021 lol</p>
             </div>
           </div>
 
-          <div class="col col-6">
+          <div class="col col-6 col-lg-4">
             <div class="text-white d-flex align-items-center">
               <img src="./assets/imgs/search/image-12.jpg" alt="" />
               <p class="ms-2 mb-0">Brani che ti piacciono</p>
             </div>
           </div>
-          <div class="col col-6">
+          <div class="col col-6 col-lg-4">
             <div class="text-white d-flex align-items-center">
               <img src="./assets/imgs/search/image-13.jpeg" alt="" />
               <p class="ms-2 mb-0">Be The Young</p>
             </div>
           </div>
-          <div class="col col-6">
+          <div class="col col-6 col-lg-4">
             <div class="text-white d-flex align-items-center">
               <img src="./assets/imgs/search/image-14.jpg" alt="" />
               <p class="ms-2 mb-0">Deep Dive with Ali Ab...</p>
@@ -143,8 +143,11 @@
       </section>
       <section>
         <div class="container">
-          <div class="row row-cols-1 row-cols-lg-5 justify-content-center align-items-center my-4 gap-4">
-            <div class="col">
+          <h2 class="text-white mt-5">Le playlist più ascoltate:</h2>
+          <div
+            class="row row-cols-1 row-cols-lg-5 justify-content-center align-items-center my-4 gap-4"
+          >
+            <div class="col flex-grow-1">
               <div class="p-3 d-flex flex-column text-white gap-3">
                 <div class="d-flex gap-3 flex-lg-column">
                   <img
@@ -152,20 +155,27 @@
                     class="images-playlist object-fit-cover"
                     alt="playlist"
                   />
-                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> study and work space</p>
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Study and work space
+                  </p>
                 </div>
-                <div class="d-flex justify-content-between fs-3 align-items-center">
-                  <div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
                     <i class="bi bi-suit-heart"></i>
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
                   <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">16 brani</span> <i class="bi bi-play-circle"></i>
+                    <span class="fs-6 text-secondary">16 brani</span>
+                    <i class="bi bi-play-circle"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col flex-grow-1">
               <div class="p-3 d-flex flex-column text-white gap-3">
                 <div class="d-flex gap-3 flex-lg-column">
                   <img
@@ -173,21 +183,28 @@
                     class="images-playlist object-fit-cover"
                     alt="playlist"
                   />
-                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> This is Snoop Dogg</p>
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    This is Snoop Dogg
+                  </p>
                 </div>
-                <div class="d-flex justify-content-between fs-3 align-items-center">
-                  <div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
                     <i class="bi bi-suit-heart"></i>
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
                   <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">30 brani</span> <i class="bi bi-play-circle"></i>
+                    <span class="fs-6 text-secondary">30 brani</span>
+                    <i class="bi bi-play-circle"></i>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div class="col">
+
+            <div class="col flex-grow-1">
               <div class="p-3 d-flex flex-column text-white gap-3">
                 <div class="d-flex gap-3 flex-lg-column">
                   <img
@@ -195,20 +212,27 @@
                     class="images-playlist object-fit-cover"
                     alt="playlist"
                   />
-                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> Best of Rolling Stones</p>
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Best of Rolling Stones
+                  </p>
                 </div>
-                <div class="d-flex justify-content-between fs-3 align-items-center">
-                  <div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
                     <i class="bi bi-suit-heart"></i>
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
                   <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">20 brani</span> <i class="bi bi-play-circle"></i>
+                    <span class="fs-6 text-secondary">20 brani</span>
+                    <i class="bi bi-play-circle"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col flex-grow-1">
               <div class="p-3 d-flex flex-column text-white gap-3">
                 <div class="d-flex gap-3 flex-lg-column">
                   <img
@@ -216,20 +240,27 @@
                     class="images-playlist object-fit-cover"
                     alt="playlist"
                   />
-                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> Alternative rock mix</p>
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Alternative rock mix
+                  </p>
                 </div>
-                <div class="d-flex justify-content-between fs-3 align-items-center">
-                  <div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
                     <i class="bi bi-suit-heart"></i>
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
                   <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">44 brani</span> <i class="bi bi-play-circle"></i>
+                    <span class="fs-6 text-secondary">44 brani</span>
+                    <i class="bi bi-play-circle"></i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col flex-grow-1">
               <div class="p-3 d-flex flex-column text-white gap-3">
                 <div class="d-flex gap-3 flex-lg-column">
                   <img
@@ -237,22 +268,110 @@
                     class="images-playlist object-fit-cover"
                     alt="playlist"
                   />
-                  <p class="fw-bold fs-5"><span class="fs-6 fw-normal text-secondary">Playlist</span> </br> Canzoni anni 70'</p>
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Canzoni anni 70'
+                  </p>
                 </div>
-                <div class="d-flex justify-content-between fs-3 align-items-center">
-                  <div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
                     <i class="bi bi-suit-heart"></i>
                     <i class="bi bi-three-dots-vertical"></i>
                   </div>
                   <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">28 brani</span> <i class="bi bi-play-circle"></i>
+                    <span class="fs-6 text-secondary">35 brani</span>
+                    <i class="bi bi-play-circle"></i>
                   </div>
                 </div>
               </div>
             </div>
-
-
-            
+            <div class="col flex-grow-1">
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://images.genius.com/9118a64d842f1611d83f5090989a3475.788x788x1.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Canzoni anni 90'
+                  </p>
+                </div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">47 brani</span>
+                    <i class="bi bi-play-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col flex-grow-1">
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://www.spettacolo.net/foto/g-391a.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Canzoni anni 80'
+                  </p>
+                </div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">33 brani</span>
+                    <i class="bi bi-play-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col flex-grow-1">
+              <div class="p-3 d-flex flex-column text-white gap-3">
+                <div class="d-flex gap-3 flex-lg-column">
+                  <img
+                    src="https://www.homolaicus.com/arte/images/de-andre.jpg"
+                    class="images-playlist object-fit-cover"
+                    alt="playlist"
+                  />
+                  <p class="fw-bold fs-5">
+                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
+                    <br />
+                    Canzoni anni 60'
+                  </p>
+                </div>
+                <div
+                  class="d-flex justify-content-between fs-3 align-items-center"
+                >
+                  <div class="fs-4">
+                    <i class="bi bi-suit-heart"></i>
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </div>
+                  <div class="align-items-center d-flex gap-4">
+                    <span class="fs-6 text-secondary">13 brani</span>
+                    <i class="bi bi-play-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
