@@ -51,6 +51,16 @@ const pad = function (hex) {
   return ('000000' + hex).slice(-6)
 }
 
+const isLightColor = function (hexColor) {
+  const r = parseInt(hexColor.substr(0, 2), 16)
+  const g = parseInt(hexColor.substr(2, 2), 16)
+  const b = parseInt(hexColor.substr(4, 2), 16)
+
+  const brightness = 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+  return brightness > 200
+}
+
 const start = function () {
   let imgReference = document.querySelector('#cover')
   let context = draw(imgReference)
@@ -60,6 +70,10 @@ const start = function () {
   let mostRecurrent = findMostRecurrentColor(allColors)
 
   let mostRecurrentHex = pad(mostRecurrent)
+
+  if (isLightColor(mostRecurrentHex)) {
+    mostRecurrentHex = '808080'
+  }
 
   console.log(mostRecurrentHex)
   const divElement = document.getElementById('colonna-centrale')
