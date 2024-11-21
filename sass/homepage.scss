@@ -14,9 +14,10 @@
   border: 1px solid white;
   color: white;
   border-radius: 20px;
-  :hover {
+  &:hover {
     color: black;
     background-color: #1ed760;
+    border: none;
   }
 }
 
