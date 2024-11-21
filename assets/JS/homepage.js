@@ -16,7 +16,6 @@ allHearts.forEach((heart) => {
 })
 
 const END_POINT = 'https:striveschool-api.herokuapp.com/api/deezer/album/454043'
-// collega il tasto play all'album di Jimy Hendrix
 fetch(END_POINT)
   .then((oggetto) => {
     if (oggetto.ok) {
@@ -29,13 +28,12 @@ fetch(END_POINT)
     console.log(dati, 'dati')
     const playButton = document.getElementById('play-button')
     playButton.addEventListener('click', () => {
-      window.location.assign(dati.share)
+      window.location.assign(data.tracklist)
     })
   })
   .catch((error) => {
     console.log(error, 'errore')
   })
-
 const playlistImages = document.querySelectorAll('.images-playlist')
 playlistImages.forEach((img) => {
   img.addEventListener('mouseover', () => {
