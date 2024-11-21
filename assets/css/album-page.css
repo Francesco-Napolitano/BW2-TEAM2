@@ -1,10 +1,9 @@
-.album {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 46%, rgb(221, 189, 63) 61%);
-}
-
 .icon {
   background: rgba(204, 177, 72, 1) 61%;
+}
+
+.playSong {
+  cursor: pointer;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -48,7 +47,7 @@
 
 #option-button button:active {
   transform: scale(1);
-  box-shadow: 0 0 10px 3px rgba(13, 131, 9, 0.3);
+  box-shadow: 0 0 10px 3px #0d8309ab;
 }
 
 #option-button button i {
@@ -83,6 +82,14 @@
   transform: scale(1.6);
 }
 
+.text-dark {
+  opacity: 0.75;
+}
+
+.btn-dark {
+  opacity: 0.95;
+}
+
 #colonna-destra,
 #colonna-sinistra {
   background-color: rgba(0, 0, 0, 0.933);
@@ -99,10 +106,10 @@
 
 ::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 10px;
-  border: 1px solid #323a3e;
-  --sb-track-color: #0a0c0c;
-  --sb-thumb-color: #4a504d;
+  border-radius: 5px;
+  border: 1px solid #323a3ea8;
+  --sb-track-color: #0a0c0ca9;
+  --sb-thumb-color: #4c4c4ca9;
   --sb-size: 15px;
 }
 
