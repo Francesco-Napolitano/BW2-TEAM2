@@ -70,12 +70,21 @@ div > span {
 }
 
 #top-album {
-  width: 85vw;
+  background: rgb(30, 30, 30);
+  background: linear-gradient(
+    198deg,
+    rgba(30, 30, 30, 1) 14%,
+    rgba(0, 0, 0, 1) 64%
+  );
 }
+
+
 
 #play-button{
   background-color: #1ed760;
 }
+
+
 
 // .side-text {
 //   display: flex;

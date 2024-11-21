@@ -52,18 +52,23 @@
       </nav>
     </header>
     <main class="pb-5 mb-4 mb-lg-0 pb-lg-2">
-      <div class="container mt-5 d-none d-lg-block">
-        <div id="top-album" class="row g-0">
-          <div class="col-4 col-lg-3 d-flex align-items-center">
+      <div class="container mt-5 d-none d-lg-block" id="top-album-container">
+        <div id="top-album" class="row align-items-center py-3 ps-2">
+          <div class="col-3 d-flex align-items-center">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/f/f2/Jimi_Hendrix_-_Electric_Ladyland.jpg"
-              class="img-fluid"
-              style="width: 200px; height: 200px"
+              class="rounded-start w-100 object-fit-fill"
               alt="poster-film"
+              id="adv-song"
             />
           </div>
-          <div class="col-8 col-lg-9 d-flex flex-column justify-content-center">
-            <div class="card-body text-white">
+          <div class="col-9 d-flex flex-column justify-content-center">
+            <div class="card-body text-white position-relative">
+              <button
+                class="position-absolute btn btn-outline-secondary rounded-pill top-0 end-0 me-3"
+              >
+                NASCONDI ANNUNCIO
+              </button>
               <p>ALBUM</p>
               <h5 class="card-title fs-1">Electric Ladyland</h5>
               <p class="card-text">Jimy Hendrix</p>
