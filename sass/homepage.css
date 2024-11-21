@@ -14,12 +14,10 @@
   border: 1px solid white;
   color: white;
   border-radius: 20px;
-  font-weight: bold;
 }
-.top-album-button:hover {
+.top-album-button :hover {
   color: black;
   background-color: #1ed760;
-  border: none;
 }
 
 .custom-bg-gradient {
@@ -61,4 +59,8 @@ div > span {
 #top-album {
   background: rgb(30, 30, 30);
   background: linear-gradient(198deg, rgb(30, 30, 30) 14%, rgb(0, 0, 0) 64%);
+}
+
+#play-button {
+  background-color: #1ed760;
 }/*# sourceMappingURL=homepage.css.map */
