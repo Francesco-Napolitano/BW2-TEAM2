@@ -12,6 +12,7 @@ const data = (idAlbum) => {
       }
     })
     .then((album) => {
+      console.log(album)
       creaAlbum(album)
     })
     .catch((error) => {
@@ -96,27 +97,49 @@ const creaAlbum = (album) => {
 
   const brani = document.getElementById('brani')
   const titoli = album.tracks.data
+  const shuffle = document.getElementById('shuffle')
+  const buttonPlay = document.getElementById('buttonPlay')
 
+  // Aggiungi la lista dei brani
   for (let i = 0; i < titoli.length; i++) {
     brani.innerHTML += `
-      <div class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white">
-        <div>
-          <h1 class="playSong fs-4 fw-semibold" style="margin-bottom: 0px" data-index="${i}">
-            ${titoli[i].title}
-          </h1>
-          <p>${album.artist.name}</p>
-        </div>
-        <label class="heart-label mb-3 me-2">
-          <input type="checkbox" class="heart-checkbox" hidden />
-          <i class="heart-icon bi bi-suit-heart fs-2"></i>
-        </label>
+    <div class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white">
+      <div>
+        <h1 class="playSong fs-4 fw-semibold" style="margin-bottom: 0px" data-index="${i}">
+          ${titoli[i].title}
+        </h1>
+        <p>${album.artist.name}</p>
       </div>
-    `
+      <label class="heart-label mb-3 me-2">
+        <input type="checkbox" class="heart-checkbox" hidden />
+        <i class="heart-icon bi bi-suit-heart fs-2"></i>
+      </label>
+    </div>
+  `
   }
 
   const playSongs = document.querySelectorAll('.playSong')
   playSongs.forEach((song, index) => {
     const track = album.tracks.data[index]
     music([song], track)
+  })
+
+  buttonPlay.addEventListener('click', () => {
+    localStorage.removeItem('tracklist')
+    localStorage.removeItem('playFromIndex')
+
+    const tracklist = album.tracks.data
+    localStorage.setItem('tracklist', JSON.stringify(tracklist))
+    localStorage.setItem('playFromIndex', '0')
+
+    playPlaylist()
+  })
+  shuffle.addEventListener('click', () => {
+    const tracklist = album.tracks.data
+    const randomIndex = Math.floor(Math.random() * tracklist.length)
+
+    localStorage.setItem('playFromIndex', randomIndex.toString())
+
+    playPlaylist()
   })
 }
