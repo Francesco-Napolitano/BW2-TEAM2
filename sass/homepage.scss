@@ -20,16 +20,6 @@
   }
 }
 
-.custom-album-container {
-  margin: 0 15rem;
-  @media (min-width: 992px) {
-    margin: 0 5rem;
-  }
-  @media (min-width: 1350px) {
-    margin: 0 10rem;
-  }
-}
-
 .custom-bg-gradient {
   background: rgb(30, 30, 30);
   background: linear-gradient(
@@ -81,6 +71,10 @@ div > span {
 
 #top-album {
   width: 85vw;
+}
+
+#play-button{
+  background-color: #1ed760;
 }
 
 // .side-text {

@@ -20,20 +20,6 @@
   background-color: #1ed760;
 }
 
-.custom-album-container {
-  margin: 0 15rem;
-}
-@media (min-width: 992px) {
-  .custom-album-container {
-    margin: 0 5rem;
-  }
-}
-@media (min-width: 1350px) {
-  .custom-album-container {
-    margin: 0 10rem;
-  }
-}
-
 .custom-bg-gradient {
   background: rgb(30, 30, 30);
   background: linear-gradient(198deg, rgb(30, 30, 30) 14%, rgb(0, 0, 0) 64%);
@@ -68,4 +54,12 @@ article img {
 
 div > span {
   font-size: 0.8em;
+}
+
+#top-album {
+  width: 85vw;
+}
+
+#play-button {
+  background-color: #1ed760;
 }/*# sourceMappingURL=homepage.css.map */
