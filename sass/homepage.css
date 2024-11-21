@@ -15,9 +15,10 @@
   color: white;
   border-radius: 20px;
 }
-.top-album-button :hover {
+.top-album-button:hover {
   color: black;
   background-color: #1ed760;
+  border: none;
 }
 
 .custom-bg-gradient {
