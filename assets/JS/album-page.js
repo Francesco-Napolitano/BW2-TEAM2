@@ -118,7 +118,7 @@ const creaAlbum = (album) => {
 
   const playSongs = document.querySelectorAll('.playSong')
   playSongs.forEach((song, index) => {
-    const track = album.tracks.data[index]
+    const track = album.tracks.data[index].preview
     music([song], track)
   })
 
