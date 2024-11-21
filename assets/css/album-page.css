@@ -1,60 +1,117 @@
-.scrollable-section {
-  max-height: 1000px;
-  overflow-y: auto;
-}
-
-/* Personalizzazione della scrollbar (opzionale) */
-.scrollable-section::-webkit-scrollbar {
-  width: 15px;
-}
-
-.scrollable-section::-webkit-scrollbar-thumb {
-  background-color: #888;
-}
-
-.scrollable-section::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-.hour {
-  font-size: 12px;
-}
-
 .album {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.8071603641456583) 46%,
-    rgba(204, 177, 72, 1) 61%
-  );
-}
-.shadowCover {
-  box-shadow: 2px 5px 19px 7px rgba(0, 0, 0, 0.68);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 46%, rgb(221, 189, 63) 61%);
 }
 
-.song {
-  font-size: 4em;
+.icon {
+  background: rgba(204, 177, 72, 1) 61%;
 }
 
-.table {
-  background-color: transparent !important;
-  color: inherit !important;
-}
-.table tr {
-  background-color: transparent !important;
-}
-.table td,
-.table th {
-  background-color: transparent !important;
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(85, 82, 82, 0.353) !important;
+  color: #fff;
 }
 
-@media screen and (max-width: 992px) {
-  thead {
+#option-button button:nth-of-type(1) {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: rgba(245, 222, 179, 0.232);
+  opacity: 0.7;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+#option-button button:nth-of-type(2) {
+  width: 50px;
+  height: 50px;
+  background-color: #0d8309ab;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+#option-button button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #0d8309ab;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+#option-button button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.796);
+}
+
+#option-button button:active {
+  transform: scale(1);
+  box-shadow: 0 0 10px 3px rgba(13, 131, 9, 0.3);
+}
+
+#option-button button i {
+  transition: transform 0.3s ease;
+}
+
+#option-button button:hover i {
+  background-color: transparent;
+  color: white;
+  transform: scale(1.2);
+}
+
+#option-button button:active i {
+  transform: scale(1);
+}
+
+.heart-icon {
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.heart-checkbox:checked + .heart-icon {
+  color: rgb(209, 24, 24);
+  text-shadow: 0 0 10px rgb(181, 19, 19), 0 0 20px rgb(181, 19, 19),
+    0 0 30px rgb(181, 19, 19);
+  transform: scale(1.6);
+}
+
+.heart-checkbox:not(:checked) + .heart-icon {
+  color: rgba(255, 255, 255, 0.781);
+  text-shadow: none;
+  transform: scale(1.6);
+}
+
+#colonna-destra,
+#colonna-sinistra {
+  background-color: rgba(0, 0, 0, 0.933);
+}
+
+::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  border: 1px solid #323a3e;
+  --sb-track-color: #0a0c0c;
+  --sb-thumb-color: #4a504d;
+  --sb-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  #colonna-centrale {
+    overflow-y: scroll;
+  }
+
+  #colonna-centrale::-webkit-scrollbar {
     display: none;
   }
-}
-
-.left {
-  position: relative;
-  top: 4em;
 }
