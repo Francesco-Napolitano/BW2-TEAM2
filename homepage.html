@@ -347,6 +347,66 @@
             class="col col-xl-9 album pt-2"
           >
             <div
+              class="mt-3 mb-4 d-none d-lg-flex justify-content-between bg-transparent"
+            >
+              <div>
+                <a class="text-dark" href="/homepage.html"
+                  ><i class="bi bi-arrow-left-circle-fill fs-1 ps-5"></i
+                ></a>
+              </div>
+
+              <div class="dropdown d-flex flex-column align-items-center">
+                <button
+                  class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="padding: 8px 15px; margin-right: 15px"
+                >
+                  <img
+                    src="./assets/imgs/user 4.webp"
+                    class="rounded-circle"
+                    width="35px"
+                    height="35px"
+                    alt="User Avatar"
+                    style="margin-right: 10px"
+                  />
+                  Serena Ferraro
+                </button>
+
+                <ul
+                  class="dropdown-menu bg-dark border-0 shadow-lg"
+                  style="min-width: 200px"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="./profile.html"
+                    >
+                      <i class="bi bi-gear pe-3"></i>
+                      Impostazioni
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="./welcome-page.html"
+                      onclick="esci()"
+                    >
+                      <i class="bi bi-person-circle pe-3"></i>
+                      Esci
+                    </a>
+                  </li>
+                </ul>
+                <button
+                  id="amici"
+                  class="btn btn-dark rounded-pill mt-2 ms-0 d-none d-xl-block bg-transparent border-2"
+                >
+                  Lista amici
+                </button>
+              </div>
+            </div>
+            <div
               class="container mt-5 d-none d-lg-block"
               id="top-album-container"
             >
@@ -362,6 +422,7 @@
                 <div class="col-9 d-flex flex-column justify-content-center">
                   <div class="card-body text-white position-relative">
                     <button
+                      id="adv-button"
                       class="position-absolute btn btn-outline-secondary rounded-pill top-0 end-0 me-3"
                     >
                       NASCONDI ANNUNCIO
@@ -459,7 +520,9 @@
                 >
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://t3.ftcdn.net/jpg/02/97/00/28/360_F_297002806_sGFgV1oPMgeuRfAJpgF01p3RduNGDIxw.jpg"
                           class="images-playlist object-fit-cover"
@@ -489,7 +552,9 @@
                   </div>
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://www.cygnusmusic.net/wp-content/uploads/2023/06/This-Is-Playlist.jpg"
                           class="images-playlist object-fit-cover"
@@ -520,7 +585,9 @@
 
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c41cb99a5051e4b1034622284"
                           class="images-playlist object-fit-cover"
@@ -550,7 +617,9 @@
                   </div>
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://i1.sndcdn.com/artworks-zWFpCflzYN8yyAZQ-xMXzlw-t500x500.jpg"
                           class="images-playlist object-fit-cover"
@@ -580,7 +649,9 @@
                   </div>
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://cdn-d.smehost.net/sites/eca8caccee084ea1a6d20780b8091381/wp-content/uploads/2022/12/degregori.jpg"
                           class="images-playlist object-fit-cover"
@@ -610,7 +681,9 @@
                   </div>
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://images.genius.com/9118a64d842f1611d83f5090989a3475.788x788x1.jpg"
                           class="images-playlist object-fit-cover"
@@ -640,7 +713,9 @@
                   </div>
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://www.spettacolo.net/foto/g-391a.jpg"
                           class="images-playlist object-fit-cover"
@@ -670,7 +745,9 @@
                   </div>
                   <div class="col flex-grow-1">
                     <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div class="d-flex gap-3 flex-lg-column">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
                         <img
                           src="https://www.homolaicus.com/arte/images/de-andre.jpg"
                           class="images-playlist object-fit-cover"
