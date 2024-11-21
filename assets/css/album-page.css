@@ -1,10 +1,9 @@
-.album {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 46%, rgb(221, 189, 63) 61%);
-}
-
 .icon {
   background: rgba(204, 177, 72, 1) 61%;
+}
+
+.playSong {
+  cursor: pointer;
 }
 
 .dropdown-menu .dropdown-item:hover {
