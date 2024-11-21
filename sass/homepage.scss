@@ -14,9 +14,10 @@
   border: 1px solid white;
   color: white;
   border-radius: 20px;
-  :hover {
+  &:hover {
     color: black;
     background-color: #1ed760;
+    border: none;
   }
 }
 
@@ -59,8 +60,8 @@ article img {
 }
 
 .images-playlist {
-  width: 11em;
-  height: 11em;
+  width: 8em;
+  height: 8em;
   -webkit-box-shadow: -1px -1px 12px -2px #ffffff;
   box-shadow: -1px -1px 12px -2px #ffffff;
 }
@@ -76,12 +77,6 @@ div > span {
     rgba(30, 30, 30, 1) 14%,
     rgba(0, 0, 0, 1) 64%
   );
-}
-
-
-
-#play-button{
-  background-color: #1ed760;
 }
 
 

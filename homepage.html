@@ -14,6 +14,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="/assets/imgs/Spotify_Icon_Green.svg"
+      type="image/png"
+    />
     <link rel="stylesheet" href="assets/css/circular-font.css" />
     <link rel="stylesheet" href="./sass/homepage.css" />
   </head>
@@ -52,342 +58,814 @@
       </nav>
     </header>
     <main class="pb-5 mb-4 mb-lg-0 pb-lg-2">
-      <div class="container mt-5 d-none d-lg-block" id="top-album-container">
-        <div id="top-album" class="row align-items-center py-3 ps-2">
-          <div class="col-3 d-flex align-items-center">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/f/f2/Jimi_Hendrix_-_Electric_Ladyland.jpg"
-              class="rounded-start w-100 object-fit-fill"
-              alt="poster-film"
-              id="adv-song"
-            />
-          </div>
-          <div class="col-9 d-flex flex-column justify-content-center">
-            <div class="card-body text-white position-relative">
-              <button
-                class="position-absolute btn btn-outline-secondary rounded-pill top-0 end-0 me-3"
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            id="colonna-sinistra"
+            class="d-none d-xl-block col-xl-3"
+            style="height: 100vh; overflow: auto"
+          >
+            <div class="p-4">
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-house-door-fill fs-4 text-light pe-3"></i>
+                  <a
+                    href="./homepage.html"
+                    class="text-light text-decoration-none fs-5"
+                    >Home</a
+                  >
+                </li>
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-search fs-4 text-light pe-3"></i>
+                  <a
+                    href="./search.html"
+                    class="text-light text-decoration-none fs-5"
+                    >Cerca</a
+                  >
+                </li>
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-collection-play fs-4 text-light pe-3"></i>
+                  <a
+                    href="./library.html"
+                    class="text-light text-decoration-none fs-5"
+                    >La tua libreria</a
+                  >
+                </li>
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center p-2 me-3 fs-5"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  >
+                    <i class="bi bi-plus-lg text-black text-light fs-4"></i>
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
+                    >Crea la tua Playlist</a
+                  >
+                </li>
+
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center p-2 me-3"
+                    style="
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      overflow: hidden;
+                    "
+                  >
+                    <img
+                      src="./assets/imgs/liked song.png"
+                      alt="liked song"
+                      style="height: 200%; object-fit: cover"
+                    />
+                  </div>
+                  <a
+                    class="text-light text-decoration-none fs-5"
+                    href="./album-page.html?id=branipreferiti"
+                    >Brani che ti piacciono</a
+                  >
+                </li>
+
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-success d-flex align-items-center justify-content-center p-2 me-3 fs-5"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  >
+                    <i class="bi bi-bookmark text-black fs-4"></i>
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
+                    >I tuoi episodi</a
+                  >
+                </li>
+              </ul>
+              <hr class="text-white my-4" />
+              <div
+                class="scrollable-section"
+                style="max-height: calc(100vh - 200px); overflow-y: auto"
               >
-                NASCONDI ANNUNCIO
-              </button>
-              <p>ALBUM</p>
-              <h5 class="card-title fs-1">Electric Ladyland</h5>
-              <p class="card-text">Jimy Hendrix</p>
-              <p class="card-text">
-                Ascolta l'album del leggendario Jimy Hendrix
-              </p>
-              <div class="mt-5 d-flex align-items-center gap-3">
+                <ul class="list-unstyled mb-0">
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/4629625/pexels-photo-4629625.jpeg"
+                      alt="early stage"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎸</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Early Stage - Indie Rock</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="be the young"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎤</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Be the Young - Alt Rock</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="kimiko vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎶</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Kimiko Vibes - Indie Pop</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/8112576/pexels-photo-8112576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="saggio vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🕺</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Saggio Vibes - Afrobeat</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/29479795/pexels-photo-29479795/free-photo-of-giovane-donna-che-soffia-un-chewing-gum-da-vicino.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="main character"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌟</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Main Character - Pop</a
+                    >
+                  </li>
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/1280730/pexels-photo-1280730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="coffee vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">☕</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Coffee Vibes - Chill Beats</a
+                    >
+                  </li>
+
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/15020813/pexels-photo-15020813/free-photo-of-alba-paesaggio-natura-tramonto.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="sunset beats"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌅</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Sunset Beats - Relaxing Tunes</a
+                    >
+                  </li>
+
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="upbeat tunes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎉</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Upbeat Tunes - Party Playlist</a
+                    >
+                  </li>
+
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/9529373/pexels-photo-9529373.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="study focus"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">📚</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Study Focus - Concentration Music</a
+                    >
+                  </li>
+
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/19180583/pexels-photo-19180583/free-photo-of-sussurri-dell-handpan-musicista-accattivante-avvolto-nella-nebbia-rosa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="that mood"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🔪</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >That Mood - Trap</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/159613/ghettoblaster-radio-recorder-boombox-old-school-159613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="veecarlotta"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎧</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Vee & Carlotta - Hip-Hop</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/802195/pexels-photo-802195.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="emily winchester"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">💀</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Emily Winchester - Dark Pop</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/1181820/pexels-photo-1181820.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="landing page"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌌</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Landing Page - Experimental</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/3152174/pexels-photo-3152174.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="2021 lol"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎉</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >2025 LOL - Mashup</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/7335183/pexels-photo-7335183.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="honeys and glass"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🍯</span>
+                    <a class="text-light text-decoration-none fs-5" href="#"
+                      >Honey & Glass - Chillwave</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            id="colonna-centrale"
+            style="height: 100vh; overflow-y: auto; overflow-x: hidden"
+            class="col col-xl-9 album pt-2"
+          >
+            <div
+              class="mt-3 mb-4 d-none d-lg-flex justify-content-between bg-transparent"
+            >
+              <div>
+                <a class="text-dark" href="/homepage.html"
+                  ><i class="bi bi-arrow-left-circle-fill fs-1 ps-5"></i
+                ></a>
+              </div>
+
+              <div class="dropdown d-flex flex-column align-items-center">
                 <button
-                  class="top-album-button border-0 text-black fw-bold"
-                  id="play-button"
+                  class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="padding: 8px 15px; margin-right: 15px"
                 >
-                  Play
+                  <img
+                    src="./assets/imgs/user 4.webp"
+                    class="rounded-circle"
+                    width="35px"
+                    height="35px"
+                    alt="User Avatar"
+                    style="margin-right: 10px"
+                  />
+                  Serena Ferraro
                 </button>
-                <button class="top-album-button">Salva</button>
-                <i class="bi bi-three-dots"></i>
+
+                <ul
+                  class="dropdown-menu bg-dark border-0 shadow-lg"
+                  style="min-width: 200px"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="./profile.html"
+                    >
+                      <i class="bi bi-gear pe-3"></i>
+                      Impostazioni
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-light d-flex align-items-center"
+                      href="./welcome-page.html"
+                      onclick="esci()"
+                    >
+                      <i class="bi bi-person-circle pe-3"></i>
+                      Esci
+                    </a>
+                  </li>
+                </ul>
+                <button
+                  id="amici"
+                  class="btn btn-dark rounded-pill mt-2 ms-0 d-none d-xl-block bg-transparent border-2"
+                >
+                  Lista amici
+                </button>
+              </div>
+            </div>
+            <div
+              class="container mt-5 d-none d-lg-block"
+              id="top-album-container"
+            >
+              <div id="top-album" class="row align-items-center py-3 ps-2">
+                <div class="col-3 d-flex align-items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/f/f2/Jimi_Hendrix_-_Electric_Ladyland.jpg"
+                    class="rounded-start w-100 object-fit-fill"
+                    alt="poster-film"
+                    id="adv-song"
+                  />
+                </div>
+                <div class="col-9 d-flex flex-column justify-content-center">
+                  <div class="card-body text-white position-relative">
+                    <button
+                      id="adv-button"
+                      class="position-absolute btn btn-outline-secondary rounded-pill top-0 end-0 me-3"
+                    >
+                      NASCONDI ANNUNCIO
+                    </button>
+                    <p>ALBUM</p>
+                    <h5 class="card-title fs-1">Electric Ladyland</h5>
+                    <p class="card-text">Jimy Hendrix</p>
+                    <p class="card-text">
+                      Ascolta l'album del leggendario Jimy Hendrix
+                    </p>
+                    <div class="mt-5 d-flex align-items-center gap-3">
+                      <button id="play-button" class="top-album-button">
+                        Play
+                      </button>
+                      <button class="top-album-button">Salva</button>
+                      <i class="bi bi-three-dots"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="container mb-4">
+              <div class="row">
+                <div
+                  class="col col-12 d-flex align-items-center justify-content-between mt-3"
+                >
+                  <h1 class="text-white">Buonasera</h1>
+                  <div
+                    class="fs-1 fw-bold text-white d-flex justify-content-between"
+                    id="icon-container"
+                  >
+                    <i class="bi bi-bell d-lg-none"></i>
+                    <i class="bi bi-stopwatch d-lg-none"></i>
+                    <i class="bi bi-gear d-lg-none"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-12 mt-4">
+                  <button class="custom-button">Musica</button>
+                  <button class="custom-button">Podcast e show</button>
+                </div>
+              </div>
+            </section>
+            <section class="container">
+              <article class="row g-2">
+                <div class="col col-6 col-lg-4">
+                  <div class="text-white d-flex align-items-center">
+                    <img src="./assets/imgs/search/image-1.jpeg" alt="" />
+                    <p class="ms-2 mb-0">Your discover weekly</p>
+                  </div>
+                </div>
+                <div class="col col-6 col-lg-4">
+                  <div class="d-flex align-items-center text-white">
+                    <img src="./assets/imgs/search/image-10.jpg" alt="" />
+                    <p class="ms-2 mb-0">saggio vibes 💃🩰</p>
+                  </div>
+                </div>
+                <div class="col col-6 col-lg-4">
+                  <div class="d-flex align-items-center text-white">
+                    <img src="./assets/imgs/liked song.png" alt="" />
+                    <p class="ms-2 mb-0">Brani che ti piacciono</p>
+                  </div>
+                </div>
+
+                <div class="col col-6 col-lg-4">
+                  <div class="text-white d-flex align-items-center">
+                    <img src="./assets/imgs/search/image-12.jpg" alt="" />
+                    <p class="ms-2 mb-0">Brani che ti piacciono</p>
+                  </div>
+                </div>
+                <div class="col col-6 col-lg-4">
+                  <div class="text-white d-flex align-items-center">
+                    <img src="./assets/imgs/search/image-13.jpeg" alt="" />
+                    <p class="ms-2 mb-0">Be The Young</p>
+                  </div>
+                </div>
+                <div class="col col-6 col-lg-4">
+                  <div class="text-white d-flex align-items-center">
+                    <img src="./assets/imgs/search/image-14.jpg" alt="" />
+                    <p class="ms-2 mb-0">Deep Dive with Ali Ab...</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+            <section>
+              <div class="container">
+                <h2 class="text-white mt-5">Le playlist più ascoltate:</h2>
+                <div
+                  class="row row-cols-1 row-cols-lg-5 justify-content-center align-items-center my-4 gap-4"
+                >
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://t3.ftcdn.net/jpg/02/97/00/28/360_F_297002806_sGFgV1oPMgeuRfAJpgF01p3RduNGDIxw.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Study and work space
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">16 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://www.cygnusmusic.net/wp-content/uploads/2023/06/This-Is-Playlist.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          This is Snoop Dogg
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">30 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c41cb99a5051e4b1034622284"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Only Rolling Stones
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">20 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://i1.sndcdn.com/artworks-zWFpCflzYN8yyAZQ-xMXzlw-t500x500.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Alternative rock mix
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">44 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://cdn-d.smehost.net/sites/eca8caccee084ea1a6d20780b8091381/wp-content/uploads/2022/12/degregori.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Canzoni anni 70'
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">35 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://images.genius.com/9118a64d842f1611d83f5090989a3475.788x788x1.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Canzoni anni 90'
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">47 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://www.spettacolo.net/foto/g-391a.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Canzoni anni 80'
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">33 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col flex-grow-1">
+                    <div class="p-3 d-flex flex-column text-white gap-3">
+                      <div
+                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
+                      >
+                        <img
+                          src="https://www.homolaicus.com/arte/images/de-andre.jpg"
+                          class="images-playlist object-fit-cover"
+                          alt="playlist"
+                        />
+                        <p class="fw-bold fs-5">
+                          <span class="fs-6 fw-normal text-secondary"
+                            >Playlist</span
+                          >
+                          <br />
+                          Canzoni anni 60'
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between fs-3 align-items-center"
+                      >
+                        <div class="fs-5 me-xl-1">
+                          <i class="bi bi-suit-heart"></i>
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="align-items-center d-flex gap-4">
+                          <span class="fs-6 text-secondary">13 brani</span>
+                          <i class="bi bi-play-circle"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div id="colonna-destra" class="d-none col-xl-2">
+            <div class="p-4">
+              <div
+                class="d-flex justify-content-between align-items-center mt-4"
+              >
+                <h4 class="text-light">Attività amici</h4>
+                <div>
+                  <i class="bi bi-person-plus text-light fs-5 me-4"></i>
+
+                  <i id="icon-x" class="bi bi-x-lg text-light fs-5"></i>
+                </div>
+              </div>
+              <hr class="text-white my-4" />
+              <div
+                class="scrollable-section"
+                style="max-height: calc(100vh - 200px); overflow-y: auto"
+              >
+                <ul class="list-unstyled mb-0">
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user1.webp"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">Charlie Hookham</h6>
+                        <p class="mb-1">In Camera · Yumi Zouma</p>
+                        <p><i class="bi bi-pause-circle"></i> EP III</p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">4 ore</p>
+                  </li>
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user 2.jpg"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">lightdark02</h6>
+                        <p class="mb-1">Aimed to kill · Jade LeMac</p>
+                        <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">8 ore</p>
+                  </li>
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user 3.jpeg"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">Valeria Traverso</h6>
+                        <p class="mb-1">New Kings · Sleeping wolf</p>
+                        <p>
+                          <i class="bi bi-music-note-beamed"></i> Twist bedass
+                          mood
+                        </p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">4 ore</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <section class="container mb-4">
-        <div class="row">
-          <div
-            class="col col-12 d-flex align-items-center justify-content-between mt-3"
-          >
-            <h1 class="text-white">Buonasera</h1>
-            <div
-              class="fs-1 fw-bold text-white d-flex justify-content-between"
-              id="icon-container"
-            >
-              <i class="bi bi-bell d-lg-none"></i>
-              <i class="bi bi-stopwatch d-lg-none"></i>
-              <i class="bi bi-gear d-lg-none"></i>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-12 mt-4">
-            <button class="custom-button">Musica</button>
-            <button class="custom-button">Podcast e show</button>
-          </div>
-        </div>
-      </section>
-      <section class="container">
-        <article class="row g-2">
-          <div class="col col-6 col-lg-4">
-            <div class="text-white d-flex align-items-center">
-              <img src="./assets/imgs/search/image-1.jpeg" alt="" />
-              <p class="ms-2 mb-0">Your discover weekly</p>
-            </div>
-          </div>
-          <div class="col col-6 col-lg-4">
-            <div class="d-flex align-items-center text-white">
-              <img src="./assets/imgs/search/image-10.jpg" alt="" />
-              <p class="ms-2 mb-0">saggio vibes 💃🩰</p>
-            </div>
-          </div>
-          <div class="col col-6 col-lg-4">
-            <div class="d-flex align-items-center text-white">
-              <img src="./assets/imgs/liked song.png" alt="" />
-              <p class="ms-2 mb-0">Brani che ti piacciono</p>
-            </div>
-          </div>
-
-          <div class="col col-6 col-lg-4">
-            <div class="text-white d-flex align-items-center">
-              <img src="./assets/imgs/search/image-12.jpg" alt="" />
-              <p class="ms-2 mb-0">Brani che ti piacciono</p>
-            </div>
-          </div>
-          <div class="col col-6 col-lg-4">
-            <div class="text-white d-flex align-items-center">
-              <img src="./assets/imgs/search/image-13.jpeg" alt="" />
-              <p class="ms-2 mb-0">Be The Young</p>
-            </div>
-          </div>
-          <div class="col col-6 col-lg-4">
-            <div class="text-white d-flex align-items-center">
-              <img src="./assets/imgs/search/image-14.jpg" alt="" />
-              <p class="ms-2 mb-0">Deep Dive with Ali Ab...</p>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section>
-        <div class="container">
-          <h2 class="text-white mt-5">Le playlist più ascoltate:</h2>
-          <div
-            class="row row-cols-1 row-cols-lg-5 justify-content-center align-items-center my-4 gap-4"
-          >
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://t3.ftcdn.net/jpg/02/97/00/28/360_F_297002806_sGFgV1oPMgeuRfAJpgF01p3RduNGDIxw.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Study and work space
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">16 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://www.cygnusmusic.net/wp-content/uploads/2023/06/This-Is-Playlist.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    This is Snoop Dogg
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">30 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c41cb99a5051e4b1034622284"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Best of Rolling Stones
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">20 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://i1.sndcdn.com/artworks-zWFpCflzYN8yyAZQ-xMXzlw-t500x500.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Alternative rock mix
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">44 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://cdn-d.smehost.net/sites/eca8caccee084ea1a6d20780b8091381/wp-content/uploads/2022/12/degregori.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Canzoni anni 70'
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">35 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://images.genius.com/9118a64d842f1611d83f5090989a3475.788x788x1.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Canzoni anni 90'
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">47 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://www.spettacolo.net/foto/g-391a.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Canzoni anni 80'
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">33 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col flex-grow-1">
-              <div class="p-3 d-flex flex-column text-white gap-3">
-                <div class="d-flex gap-3 flex-lg-column">
-                  <img
-                    src="https://www.homolaicus.com/arte/images/de-andre.jpg"
-                    class="images-playlist object-fit-cover"
-                    alt="playlist"
-                  />
-                  <p class="fw-bold fs-5">
-                    <span class="fs-6 fw-normal text-secondary">Playlist</span>
-                    <br />
-                    Canzoni anni 60'
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between fs-3 align-items-center"
-                >
-                  <div class="fs-4">
-                    <i class="bi bi-suit-heart"></i>
-                    <i class="bi bi-three-dots-vertical"></i>
-                  </div>
-                  <div class="align-items-center d-flex gap-4">
-                    <span class="fs-6 text-secondary">13 brani</span>
-                    <i class="bi bi-play-circle"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

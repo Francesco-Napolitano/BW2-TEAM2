@@ -15,9 +15,10 @@
   color: white;
   border-radius: 20px;
 }
-.top-album-button :hover {
+.top-album-button:hover {
   color: black;
   background-color: #1ed760;
+  border: none;
 }
 
 .custom-bg-gradient {
@@ -47,8 +48,8 @@ article img {
 }
 
 .images-playlist {
-  width: 11em;
-  height: 11em;
+  width: 8em;
+  height: 8em;
   box-shadow: -1px -1px 12px -2px #ffffff;
 }
 
@@ -59,8 +60,4 @@ div > span {
 #top-album {
   background: rgb(30, 30, 30);
   background: linear-gradient(198deg, rgb(30, 30, 30) 14%, rgb(0, 0, 0) 64%);
-}
-
-#play-button {
-  background-color: #1ed760;
 }/*# sourceMappingURL=homepage.css.map */
