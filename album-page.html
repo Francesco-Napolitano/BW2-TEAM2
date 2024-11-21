@@ -567,7 +567,49 @@
         </div>
       </div>
     </main>
+    <nav class="navbar fixed-bottom navbar-dark py-3">
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Pulsante Play/Pausa -->
+        <button
+          id="playPauseBtn"
+          class="btn btn-outline-light rounded-circle p-3"
+        >
+          <i class="bi bi-play-fill fs-4"></i>
+        </button>
 
+        <!-- Barra di avanzamento -->
+        <div class="progress-bar-container w-75">
+          <input
+            id="audioProgress"
+            type="range"
+            class="audio-progress"
+            value="0"
+            min="0"
+            max="100"
+            step="1"
+          />
+        </div>
+
+        <!-- Etichetta tempo -->
+        <div class="d-flex align-items-center">
+          <span id="currentTime" class="text-white">00:00</span>
+          <span id="duration" class="text-white mx-2">/ 00:00</span>
+
+          <!-- Controllo volume -->
+          <div class="volume-control">
+            <input
+              id="volumeControl"
+              type="range"
+              class="volume-range"
+              value="100"
+              min="0"
+              max="100"
+              step="1"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
