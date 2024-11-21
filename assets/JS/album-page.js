@@ -1,6 +1,5 @@
 const params = new URLSearchParams(window.location.search)
-const idAlbum = '71437082'
-// params.get("id");
+const idAlbum = params.get('')
 
 const data = (idAlbum) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${idAlbum}`)
@@ -12,7 +11,6 @@ const data = (idAlbum) => {
       }
     })
     .then((album) => {
-      console.log(album)
       creaAlbum(album)
     })
     .catch((error) => {
