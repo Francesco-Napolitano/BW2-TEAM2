@@ -87,13 +87,13 @@ const creaRisultatiAlbum = function (data) {
     resultDiv.className = 'col-6 col-sm-6 col-md-4 col-lg-3 mb-4'
     resultDiv.innerHTML = `
             <a href="./album-page.html?=${element.album.id}" class="card-link text-decoration-none">
-                 <div class="card bg-danger text-white h-100">
+                 <div class="card text-white h-100" style="background: linear-gradient(220.55deg, #FF5E98 0%, #0F213E 100%);">
                       <img
                            class="img-fluid"
                               src="${element.album.cover_big}"
-                              alt="${element.title}"
+                              alt="${element.title_short}"
                        />
-    <p class="text-center mt-2 fw-bold fs-5"><i class="bi bi-file-music"></i> ${element.title}</p>
+    <p class="text-center mt-2 fw-bold fs-5"> ${element.title_short}</p>
     <div class="d-flex justify-content-evenly text-center flex-wrap">
       <p style="flex-basis: 100%" class>${element.album.title}</p>
       <p class="text-secondary fst-italic">${element.artist.name}</p>
