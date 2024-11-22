@@ -1,18 +1,18 @@
 class SpotifyUser {
   constructor(nome, cognome, sesso, eta, paese, email, password, urlIMG) {
-    this.nome = nome;
-    this.cognome = cognome;
-    this.sesso = sesso;
-    this.eta = eta;
-    this.paese = paese;
-    this.email = email;
-    this.password = password;
-    this.urlIMG = urlIMG;
+    this.nome = nome
+    this.cognome = cognome
+    this.sesso = sesso
+    this.eta = eta
+    this.paese = paese
+    this.email = email
+    this.password = password
+    this.urlIMG = urlIMG
   }
 }
 
-const datiDB = JSON.parse(localStorage.getItem("User"));
-const row_item = document.getElementsByClassName("listInfo");
+const datiDB = JSON.parse(localStorage.getItem('User'))
+const row_item = document.getElementsByClassName('listInfo')
 
 row_item[0].innerHTML = ` 
            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
@@ -32,7 +32,7 @@ row_item[0].innerHTML = `
             </li>
             <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Email : ${datiDB.email}
-            </li>`;
+            </li>`
 
 const Modifica = function () {
   row_item[0].innerHTML = `
@@ -88,16 +88,16 @@ const Modifica = function () {
       >
         Salva
       </button>
-    `;
+    `
 
-  document.getElementById("save-button").addEventListener("click", function () {
-    const nome = document.getElementById("input-nome").value;
-    const cognome = document.getElementById("input-cognome").value;
-    const sesso = document.getElementById("input-sesso").value;
-    const eta = document.getElementById("input-eta").value;
-    const paese = document.getElementById("input-paese").value;
-    const email = document.getElementById("input-email").value;
-    const password = document.getElementById("input-password").value;
+  document.getElementById('save-button').addEventListener('click', function () {
+    const nome = document.getElementById('input-nome').value
+    const cognome = document.getElementById('input-cognome').value
+    const sesso = document.getElementById('input-sesso').value
+    const eta = document.getElementById('input-eta').value
+    const paese = document.getElementById('input-paese').value
+    const email = document.getElementById('input-email').value
+    const password = document.getElementById('input-password').value
 
     const UserModificato = new SpotifyUser(
       nome,
@@ -107,10 +107,10 @@ const Modifica = function () {
       paese,
       email,
       password
-    );
+    )
 
-    localStorage.setItem("User", JSON.stringify(UserModificato));
-    alert("Dati salvati con successo!");
+    localStorage.setItem('User', JSON.stringify(UserModificato))
+    alert('Dati salvati con successo!')
 
     row_item[0].innerHTML = `
         <div class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">Nome : ${nome}</div>
@@ -119,32 +119,32 @@ const Modifica = function () {
         <div class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">Età : ${eta}</div>
         <div class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">Paese : ${paese}</div>
         <div class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-5">Email : ${email}</div>
-      `;
-  });
-};
+      `
+  })
+}
 
-const ProfileImg = document.getElementById("ProfileImg");
-console.log(datiDB.urlIMG);
-console.log(ProfileImg);
-ProfileImg.setAttribute("src", `${datiDB.urlIMG}`);
+const ProfileImg = document.getElementById('ProfileImg')
+console.log(datiDB.urlIMG)
+console.log(ProfileImg)
+ProfileImg.setAttribute('src', `${datiDB.urlIMG}`)
 
-const colonnaDestra = document.getElementById("colonna-destra");
-const colonnaCentrale = document.getElementById("colonna-centrale");
-const iconX = document.getElementById("icon-x");
-const amici = document.getElementById("amici");
+const colonnaDestra = document.getElementById('colonna-destra')
+const colonnaCentrale = document.getElementById('colonna-centrale')
+const iconX = document.getElementById('icon-x')
+const amici = document.getElementById('amici')
 
-amici.addEventListener("click", () => {
-  colonnaCentrale.classList.remove("col-xl-9");
-  colonnaCentrale.classList.add("col-xl-7");
-  colonnaDestra.classList.remove("d-none");
-  colonnaDestra.classList.add("col-xl-block");
-  amici.classList.remove("d-xl-block");
-});
+amici.addEventListener('click', () => {
+  colonnaCentrale.classList.remove('col-xl-9')
+  colonnaCentrale.classList.add('col-xl-7')
+  colonnaDestra.classList.remove('d-none')
+  colonnaDestra.classList.add('col-xl-block')
+  amici.classList.remove('d-xl-block')
+})
 
-iconX.addEventListener("click", () => {
-  colonnaCentrale.classList.add("col-xl-9");
-  colonnaCentrale.classList.remove("col-xl-7");
-  colonnaDestra.classList.add("d-none");
-  colonnaDestra.classList.remove("col-xl-block");
-  amici.classList.add("d-xl-block");
-});
+iconX.addEventListener('click', () => {
+  colonnaCentrale.classList.add('col-xl-9')
+  colonnaCentrale.classList.remove('col-xl-7')
+  colonnaDestra.classList.add('d-none')
+  colonnaDestra.classList.remove('col-xl-block')
+  amici.classList.add('d-xl-block')
+})
