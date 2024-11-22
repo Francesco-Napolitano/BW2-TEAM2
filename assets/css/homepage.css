@@ -1,0 +1,50 @@
+#playlist .col > div {
+  background-color: rgba(13, 12, 12, 0.864);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(50, 46, 46, 0.2);
+  box-shadow: 0 4px 6px rgba(53, 53, 53, 0.204);
+}
+
+.col div > p {
+  font-size: 1em;
+}
+
+.images-playlist {
+  width: 8em;
+  height: 8em;
+  box-shadow: -1px -1px 12px -2px #ffffff;
+}
+
+#top-album {
+  background: rgb(30, 30, 30);
+  background: linear-gradient(198deg, rgb(30, 30, 30) 14%, rgb(0, 0, 0) 64%);
+}
+
+#albumHome .d-flex {
+  height: 8vh;
+  width: 100%;
+  background-color: rgba(13, 12, 12, 0.864);
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(50, 46, 46, 0.2);
+  box-shadow: 0 4px 6px rgba(53, 53, 53, 0.204);
+}
+
+#albumHome .img-fluid {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+#albumHome .d-flex p {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
