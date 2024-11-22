@@ -1,66 +1,15 @@
-let currentAudio = null
-let isPlaying = false // Stato della riproduzione
+let currentAudio = null // Audio in riproduzione
+let isPlaying = false // Stato di riproduzione
+let isFirstPlay = true // Flag per sapere se è la prima traccia che parte
+const soundBar = document.getElementById('soundBar') // Barra audio
+const playPauseBtn = document.getElementById('playPauseBtn') // Pulsante play/pause
+const audioProgress = document.getElementById('audioProgress') // Barra di progresso
+const currentTimeLabel = document.getElementById('currentTime') // Tempo corrente
+const durationLabel = document.getElementById('duration') // Durata totale
+const volumeControl = document.getElementById('volumeControl') // Controllo del volume
+const audioWave = document.querySelector('.audio-wave') // Onde audio
 
-const music = (music, track) => {
-  music.forEach((song) => {
-    song.addEventListener('click', (e) => {
-      console.log('Cliccato:', e.target)
-
-      if (track) {
-        const previewUrl = track
-
-        // Se è già in riproduzione un brano, fermalo
-        if (currentAudio) {
-          currentAudio.pause()
-          currentAudio.currentTime = 0
-        }
-
-        // Crea un nuovo oggetto audio per il brano selezionato
-        const audio = new Audio(previewUrl)
-        currentAudio = audio
-
-        console.log(audio.getAttribute('src'))
-
-        // Imposta gli eventi audio
-        audio.addEventListener('play', () => {
-          isPlaying = true
-          playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>'
-        })
-
-        audio.addEventListener('pause', () => {
-          isPlaying = false
-          playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>'
-        })
-
-        audio
-          .play()
-          .then(() => {
-            console.log(`Riproduzione di: ${song.textContent}`)
-            localStorage.setItem(
-              'playSong',
-              JSON.stringify(audio.getAttribute('src'))
-            )
-          })
-          .catch((err) => console.error('Errore nella riproduzione:', err))
-
-        // Aggiungi il tempo totale e corrente
-        audio.addEventListener('loadeddata', () => {
-          durationLabel.textContent = formatTime(audio.duration)
-        })
-
-        // Sincronizza la barra di progresso con il tempo
-        audio.addEventListener('timeupdate', updateProgress)
-      } else {
-        console.error(
-          'Preview non disponibile per questa traccia:',
-          song.textContent
-        )
-      }
-    })
-  })
-}
-
-// Funzione per formattare il tempo in formato mm:ss
+// Funzione per formattare il tempo
 const formatTime = (seconds) => {
   const minutes = Math.floor(seconds / 60)
   const secondsFormatted = Math.floor(seconds % 60)
@@ -93,29 +42,87 @@ const updateVolume = () => {
   }
 }
 
-// Eventi per controllare la barra audio
-const playPauseBtn = document.getElementById('playPauseBtn')
-const audioProgress = document.getElementById('audioProgress')
-const currentTimeLabel = document.getElementById('currentTime')
-const durationLabel = document.getElementById('duration')
-const volumeControl = document.getElementById('volumeControl')
-
-// Controllo play/pause
-playPauseBtn.addEventListener('click', () => {
+// Funzione per riprodurre/pausare l'audio
+const togglePlayPause = () => {
   if (isPlaying) {
     currentAudio.pause()
+    audioWave.classList.add('paused')
   } else {
     currentAudio.play()
+    audioWave.classList.remove('paused')
   }
-})
+}
 
-// Controllo della barra di progresso
+// Funzione per avviare una nuova traccia
+const playNewTrack = (previewUrl) => {
+  if (currentAudio) {
+    // Se c'è già un brano in riproduzione, fermalo
+    currentAudio.pause()
+    currentAudio.currentTime = 0
+  }
+
+  // Crea un nuovo oggetto audio
+  currentAudio = new Audio(previewUrl)
+
+  // Aggiungi eventi per la gestione play/pause
+  currentAudio.addEventListener('play', () => {
+    isPlaying = true
+    playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>'
+    if (soundBar) {
+      soundBar.classList.remove('d-none') // Rendi visibile la soundbar quando l'audio è in riproduzione
+    }
+  })
+
+  currentAudio.addEventListener('pause', () => {
+    isPlaying = false
+    playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>'
+    // Non nascondere più la soundbar quando è in pausa
+    // soundBar.classList.add('d-none'); // Questa linea è stata rimossa
+  })
+
+  currentAudio.addEventListener('ended', () => {
+    // Quando il brano finisce, non nascondere la soundbar
+    // soundBar.classList.add('d-none'); // Questa linea è stata rimossa
+    isPlaying = false
+    playPauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>'
+  })
+
+  // Imposta la durata e aggiorna la barra di progresso quando i dati sono caricati
+  currentAudio.addEventListener('loadeddata', () => {
+    durationLabel.textContent = formatTime(currentAudio.duration)
+  })
+
+  // Sincronizza la barra di progresso con il tempo
+  currentAudio.addEventListener('timeupdate', updateProgress)
+
+  // Avvia la riproduzione
+  currentAudio.play().catch((err) => {
+    console.error('Errore nella riproduzione:', err)
+  })
+}
+
+// Funzione per gestire la selezione dei brani
+const music = (music, track) => {
+  music.forEach((song) => {
+    song.addEventListener('click', () => {
+      console.log('Cliccato:', song.textContent)
+
+      if (track) {
+        playNewTrack(track)
+      } else {
+        console.error('Preview non disponibile per questa traccia')
+      }
+    })
+  })
+}
+
+// Eventi di controllo
+playPauseBtn.addEventListener('click', togglePlayPause)
 audioProgress.addEventListener('input', seekAudio)
-
-// Controllo del volume
 volumeControl.addEventListener('input', updateVolume)
 
-const songElements = document.querySelectorAll('.playSong') // Assicurati che '.playSong' rappresenti i brani
+// Inizializzazione brani (per esempio, songElements è la lista di brani con la classe 'playSong')
+const songElements = document.querySelectorAll('.playSong')
 const trackUrls = album.tracks.data.map((track) => track.preview) // URL dei brani
 
 songElements.forEach((song, index) => {

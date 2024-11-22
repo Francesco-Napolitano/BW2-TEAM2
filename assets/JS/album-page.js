@@ -53,6 +53,9 @@ const creaAlbum = (album) => {
   const cover = document.getElementById('cover')
   cover.setAttribute('src', album.cover_medium)
 
+  const coverSound = document.getElementById('coverSound')
+  coverSound.setAttribute('src', album.cover_medium)
+
   // Funzione per calcolare la durata dell'album
   function duration() {
     const hours = Math.floor(album.duration / 3600)
@@ -97,8 +100,8 @@ const creaAlbum = (album) => {
   const titoli = album.tracks.data
   const shuffle = document.getElementById('shuffle')
   const buttonPlay = document.getElementById('buttonPlay')
+  const barName = document.getElementById('barName')
 
-  // Aggiungi la lista dei brani
   for (let i = 0; i < titoli.length; i++) {
     brani.innerHTML += `
     <div class="brano-container d-flex justify-content-between align-items-center mt-4 mx-3 mx-lg-5 text-white">
@@ -116,6 +119,16 @@ const creaAlbum = (album) => {
   `
   }
 
+  const playSongElements = document.querySelectorAll('.playSong')
+
+  playSongElements.forEach((song) => {
+    song.addEventListener('click', function () {
+      const songIndex = this.getAttribute('data-index')
+      const currentSong = titoli[songIndex]
+      barName.textContent = currentSong.title
+    })
+  })
+
   const playSongs = document.querySelectorAll('.playSong')
   playSongs.forEach((song, index) => {
     const track = album.tracks.data[index].preview
@@ -132,12 +145,49 @@ const creaAlbum = (album) => {
 
     playPlaylist()
   })
+
+  // Button per riprodurre la playlist in modalità casuale
   shuffle.addEventListener('click', () => {
+    // Estrai la lista di brani da `album.tracks.data`
     const tracklist = album.tracks.data
+
+    // Genera un indice casuale
     const randomIndex = Math.floor(Math.random() * tracklist.length)
 
+    // Salva l'indice casuale in `localStorage`
     localStorage.setItem('playFromIndex', randomIndex.toString())
 
+    // Avvia la riproduzione dalla traccia casuale
     playPlaylist()
   })
+
+  // Funzione per caricare e riprodurre la playlist
+  const playPlaylist = () => {
+    // Recupera il `tracklist` dalla `localStorage` e l'indice dal quale partire
+    const tracklist = JSON.parse(localStorage.getItem('tracklist'))
+    const playFromIndex = parseInt(localStorage.getItem('playFromIndex'), 10)
+
+    // Verifica se ci sono dati salvati nella `localStorage` per iniziare la riproduzione
+    if (tracklist && tracklist.length > 0) {
+      // Imposta la traccia corrente
+      const track = tracklist[playFromIndex]
+
+      // Riproduce la traccia
+      playNewTrack(track.preview)
+
+      // Sincronizza i pulsanti per la traccia in riproduzione
+      playPauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>'
+      isPlaying = true
+      currentTrackIndex = playFromIndex
+
+      // Mostra la soundbar
+      soundBar.classList.remove('d-none')
+
+      // Imposta il nome e la copertura dell'album
+      barName.textContent = track.title
+      coverSound.src = track.album.cover_medium
+    } else {
+      console.error('Playlist non trovata!')
+    }
+  }
 }
