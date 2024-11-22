@@ -27,9 +27,6 @@ header > nav {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-#profile{
-  width: inherit;
-}
 
 main .col > div {
   overflow: hidden;
@@ -126,7 +123,7 @@ input:focus {
 }
 
 button > span{
-  font-size: 0.5em;
+  font-size: 1.5em;
 }
 
 #amici{
