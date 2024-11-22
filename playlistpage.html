@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spotify - Search Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="/assets/imgs/Spotify_Icon_Green.svg"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="assets/css/circular-font.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
+  </head>
+  <body class="bg-black">
+    <header class="text-white">
+      <nav
+        class="navbar px-4 fixed-bottom justify-content-center d-lg-none"
+        style="bottom: -2px"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="/homepage.html">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
+            >
+              <i class="bi bi-house-door fs-1"></i>
+              <p style="font-size: 0.8em" class="m-0">Home</p>
+            </div>
+          </a>
+          <a class="navbar-brand" href="/search.html">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center text-white"
+            >
+              <i class="bi bi-search fs-1 fw-bold"></i>
+              <p style="font-size: 0.8em" class="m-0">Cerca</p>
+            </div>
+          </a>
+          <a class="navbar-brand" href="/library.html">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
+            >
+              <i class="bi bi-collection-play fs-1"></i>
+              <p style="font-size: 0.8em" class="m-0">Libreria</p>
+            </div>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- COLONNA SINISTRA -->
+
+          <div
+            id="colonna-sinistra"
+            class="d-none d-xl-block col-xl-3"
+            style="height: 100vh; overflow: auto"
+          >
+            <div class="p-4">
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-house-door-fill fs-4 text-light pe-3"></i>
+                  <a
+                    href="./homepage.html"
+                    class="text-light text-decoration-none fs-5"
+                    >Home</a
+                  >
+                </li>
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-search fs-4 text-light pe-3"></i>
+                  <a
+                    href="./search.html"
+                    class="text-light text-decoration-none fs-5"
+                    >Cerca</a
+                  >
+                </li>
+                <li class="d-flex align-items-center mb-4">
+                  <i class="bi bi-collection-play fs-4 text-light pe-3"></i>
+                  <a
+                    href="./library.html"
+                    class="text-light text-decoration-none fs-5"
+                    >La tua libreria</a
+                  >
+                </li>
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center p-2 me-3 fs-5"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  >
+                    <i class="bi bi-plus-lg text-black text-light fs-4"></i>
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
+                    >Crea la tua Playlist</a
+                  >
+                </li>
+
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-body-secondary d-flex align-items-center justify-content-center p-2 me-3"
+                    style="
+                      border-radius: 50%;
+                      width: 40px;
+                      height: 40px;
+                      overflow: hidden;
+                    "
+                  >
+                    <img
+                      src="./assets/imgs/liked song.png"
+                      alt="liked song"
+                      style="height: 200%; object-fit: cover"
+                    />
+                  </div>
+                  <a
+                    class="text-light text-decoration-none fs-5"
+                    href="./album-page.html?id=branipreferiti"
+                    >Brani che ti piacciono</a
+                  >
+                </li>
+
+                <li class="d-flex align-items-center mb-4">
+                  <div
+                    class="bg-success d-flex align-items-center justify-content-center p-2 me-3 fs-5"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  >
+                    <i class="bi bi-bookmark text-black fs-4"></i>
+                  </div>
+                  <a class="text-light text-decoration-none fs-5" href="#"
+                    >I tuoi episodi</a
+                  >
+                </li>
+              </ul>
+              <hr class="text-white my-4" />
+              <div
+                class="scrollable-section"
+                style="max-height: calc(100vh - 200px); overflow-y: auto"
+              >
+                <ul class="list-unstyled mb-0">
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/4629625/pexels-photo-4629625.jpeg"
+                      alt="early stage"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎸</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=IndieRock"
+                      >Early Stage - Indie Rock</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/165971/pexels-photo-165971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="be the young"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎤</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=AltRock"
+                      >Be the Young - Alt Rock</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="kimiko vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎶</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=IndiePop"
+                      >Kimiko Vibes - Indie Pop</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/8112576/pexels-photo-8112576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="saggio vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🕺</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=Afrobeat"
+                      >Saggio Vibes - Afrobeat</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/29479795/pexels-photo-29479795/free-photo-of-giovane-donna-che-soffia-un-chewing-gum-da-vicino.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="main character"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌟</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=Pop"
+                      >Main Character - Pop</a
+                    >
+                  </li>
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/1280730/pexels-photo-1280730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="coffee vibes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">☕</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=ChillBeats"
+                      >Coffee Vibes - Chill Beats</a
+                    >
+                  </li>
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/15020813/pexels-photo-15020813/free-photo-of-alba-paesaggio-natura-tramonto.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="sunset beats"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌅</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=RelaxingTunes"
+                      >Sunset Beats - Relaxing Tunes</a
+                    >
+                  </li>
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="upbeat tunes"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎉</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=PartyPlaylist"
+                      >Upbeat Tunes - Party Playlist</a
+                    >
+                  </li>
+                  <li class="mt-3 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/9529373/pexels-photo-9529373.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="study focus"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">📚</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=CencetrationMusic"
+                      >Study Focus - Concentration Music</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/19180583/pexels-photo-19180583/free-photo-of-sussurri-dell-handpan-musicista-accattivante-avvolto-nella-nebbia-rosa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="that mood"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🔪</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=Trap"
+                      >That Mood - Trap</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/159613/ghettoblaster-radio-recorder-boombox-old-school-159613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="veecarlotta"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎧</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=HipHop"
+                      >Vee & Carlotta - Hip-Hop</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/802195/pexels-photo-802195.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="emily winchester"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">💀</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=DarkPop"
+                      >Emily Winchester - Dark Pop</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/1181820/pexels-photo-1181820.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="landing page"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🌌</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=Experimental"
+                      >Landing Page - Experimental</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/3152174/pexels-photo-3152174.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="2021 lol"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🎉</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=Meshup"
+                      >2025 LOL - Mashup</a
+                    >
+                  </li>
+                  <li class="mt-2 d-flex align-items-center">
+                    <img
+                      src="https://images.pexels.com/photos/7335183/pexels-photo-7335183.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="honeys and glass"
+                      class="rounded-circle me-3"
+                      width="65"
+                      height="65"
+                    />
+                    <span class="fs-5 me-2">🍯</span>
+                    <a
+                      class="text-light text-decoration-none fs-5"
+                      href="/playlistpage.html?id=Chillwave"
+                      >Honey & Glass - Chillwave</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLONNA CENTRALE -->
+
+          <div
+            id="colonna-centrale"
+            style="height: 100vh; overflow-x: hidden"
+            class="col col-xl-9 px-0"
+          >
+            <!-- Search Section -->
+            <div
+              id="SearchContainer"
+              style="height: 100vh"
+              class="container-fluid scrol d-flex flex-column pb-5 mb-5 pb-lg-0 pmb-lg-0"
+            >
+              <div
+                class="position-relative top-0 start-0 w-100 d-flex justify-content-between align-items-start p-3"
+              >
+                <!-- Freccia (dispositivi piccoli e grandi) -->
+                <i
+                  class="bi bi-arrow-left fs-2 bg-transparent text-white d-lg-none"
+                ></i>
+                <a class="text-white d-none d-lg-block" href="/homepage.html">
+                  <i class="bi bi-arrow-left-circle-fill fs-1"></i>
+                </a>
+
+                <!-- Dropdown -->
+                <div class="dropdown">
+                  <button
+                    class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="padding: 5px 15px"
+                  >
+                    <img
+                      id="ProfileImg"
+                      src="./assets/imgs/user 4.webp"
+                      class="rounded-circle"
+                      alt="User Avatar"
+                      style="margin-right: 10px"
+                    />
+                    <p class="fs-5 pt-2 px-2">Serena Ferraro</p>
+                  </button>
+                  <ul
+                    class="dropdown-menu bg-dark border-0 shadow-lg"
+                    style="min-width: 200px"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item text-light d-flex align-items-center"
+                        href="./profile.html"
+                      >
+                        <i class="bi bi-gear pe-3"></i>
+                        Impostazioni
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-light d-flex align-items-center"
+                        href="./welcome-page.html"
+                        onclick="esci()"
+                      >
+                        <i class="bi bi-person-circle pe-3"></i>
+                        Esci
+                      </a>
+                    </li>
+                  </ul>
+                  <button
+                    id="amici"
+                    class="btn btn-dark rounded-pill mt-3 ms-3 d-none d-xl-block fs-5"
+                  >
+                    Lista amici
+                  </button>
+                </div>
+              </div>
+              <h1
+                id="selezionatoAlbum"
+                href="search.html"
+                class="text-white my-4 fs-1 ps-2 pb-3 text-decoration-none"
+              >
+                Album del genere : "selezionato"
+              </h1>
+            </div>
+          </div>
+
+          <!-- COLONNA DESTRA -->
+          <div id="colonna-destra" class="d-none col-xl-2">
+            <div class="p-4">
+              <div
+                class="d-flex justify-content-between align-items-center mt-4"
+              >
+                <h4 class="text-light">Attività amici</h4>
+                <div>
+                  <i class="bi bi-person-plus text-light fs-5 me-4"></i>
+
+                  <i id="icon-x" class="bi bi-x-lg text-light fs-5"></i>
+                </div>
+              </div>
+              <hr class="text-white my-4" />
+              <div
+                class="scrollable-section"
+                style="max-height: calc(100vh - 200px); overflow-y: auto"
+              >
+                <ul class="list-unstyled mb-0">
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user1.webp"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">Charlie Hookham</h6>
+                        <p class="mb-1">In Camera · Yumi Zouma</p>
+                        <p><i class="bi bi-pause-circle"></i> EP III</p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">4 ore</p>
+                  </li>
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user 2.jpg"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">lightdark02</h6>
+                        <p class="mb-1">Aimed to kill · Jade LeMac</p>
+                        <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">8 ore</p>
+                  </li>
+                  <li
+                    class="mt-3 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="./assets/imgs/user 3.jpeg"
+                        class="rounded-circle me-3"
+                        width="60px"
+                        height="60px"
+                        alt=""
+                      />
+                      <div class="text-white fs-6">
+                        <h6 class="mb-1">Valeria Traverso</h6>
+                        <p class="mb-1">New Kings · Sleeping wolf</p>
+                        <p>
+                          <i class="bi bi-music-note-beamed"></i> Twist bedass
+                          mood
+                        </p>
+                      </div>
+                    </div>
+                    <p class="hour text-light">4 ore</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/JS/playlistpage.js"></script>
+  </body>
+</html>
