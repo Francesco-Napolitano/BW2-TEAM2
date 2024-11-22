@@ -28,6 +28,7 @@
       href="/assets/imgs/Spotify_Icon_Green.svg"
       type="image/png"
     />
+    <link rel="stylesheet" href="./assets/css/sounbar.css" />
   </head>
 
   <body>
@@ -567,18 +568,39 @@
         </div>
       </div>
     </main>
-    <nav class="navbar fixed-bottom navbar-dark py-3">
+    <nav id="soundBar" class="audio-navbar navbar fixed-bottom d-none">
       <div class="container d-flex align-items-center justify-content-between">
-        <!-- Pulsante Play/Pausa -->
-        <button
-          id="playPauseBtn"
-          class="btn btn-outline-light rounded-circle p-3"
-        >
-          <i class="bi bi-play-fill fs-4"></i>
-        </button>
+        <h6 id="barName" class="text-light m-4"></h6>
+        <img
+          id="coverSound"
+          crossorigin="anonymous"
+          onload="start()"
+          src=""
+          class="img-fluid rounded shadowCover"
+          width="60px"
+          alt="Album Cover"
+        />
 
-        <!-- Barra di avanzamento -->
-        <div class="progress-bar-container w-75">
+        <div class="controls d-flex align-items-center">
+          <button class="btn-control">
+            <i class="bi bi-arrow-counterclockwise"></i>
+          </button>
+
+          <button class="btn-control">
+            <i class="bi bi-skip-backward-fill"></i>
+          </button>
+          <button id="playPauseBtn" class="btn-play">
+            <i class="bi bi-play-fill"></i>
+          </button>
+          <button class="btn-control">
+            <i class="bi bi-skip-forward-fill"></i>
+          </button>
+          <button class="btn-control">
+            <i class="bi bi-repeat"></i>
+          </button>
+        </div>
+
+        <div class="progress-bar-container">
           <input
             id="audioProgress"
             type="range"
@@ -590,26 +612,22 @@
           />
         </div>
 
-        <!-- Etichetta tempo -->
-        <div class="d-flex align-items-center">
-          <span id="currentTime" class="text-white">00:00</span>
-          <span id="duration" class="text-white mx-2">/ 00:00</span>
-
-          <!-- Controllo volume -->
-          <div class="volume-control">
-            <input
-              id="volumeControl"
-              type="range"
-              class="volume-range"
-              value="100"
-              min="0"
-              max="100"
-              step="1"
-            />
-          </div>
+        <!-- Controllo volume -->
+        <div class="volume-control-container d-flex align-items-center">
+          <i class="bi bi-volume-up text-light"></i>
+          <input
+            id="volumeControl"
+            type="range"
+            class="volume-progress"
+            value="100"
+            min="0"
+            max="100"
+            step="1"
+          />
         </div>
       </div>
     </nav>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
