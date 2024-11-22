@@ -90,35 +90,8 @@
   opacity: 0.95;
 }
 
-#colonna-destra,
-#colonna-sinistra {
-  background-color: rgba(0, 0, 0, 0.933);
-}
-
-::-webkit-scrollbar {
-  width: var(--sb-size);
-}
-
-::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 5px;
-  border: 1px solid #323a3ea8;
-  --sb-track-color: #0a0c0ca9;
-  --sb-thumb-color: #4c4c4ca9;
-  --sb-size: 15px;
-}
-
 @media (max-width: 1200px) {
   #colonna-centrale {
     overflow-y: scroll;
-  }
-
-  #colonna-centrale::-webkit-scrollbar {
-    display: none;
   }
 }
