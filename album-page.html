@@ -377,9 +377,11 @@
           >
             <div class="container-fluid"></div>
             <div class="container-fluid">
-              <i
-                class="bi bi-arrow-left fs-2 bg-transparent text-white left d-lg-none pt-2"
-              ></i>
+              <a href="homepage.html">
+                <i
+                  class="bi bi-arrow-left fs-2 bg-transparent text-white left d-lg-none pt-2"
+                ></i
+              ></a>
             </div>
             <div class="mt-3 mb-4 d-none d-lg-flex justify-content-between">
               <div>
@@ -617,57 +619,62 @@
       </div>
     </main>
 
-    <nav id="soundBar" class="audio-navbar navbar fixed-bottom">
+    <nav
+      id="soundBar"
+      class="audio-navbar navbar fixed-bottom bg-dark d-none p-2"
+    >
       <div
-        class="container-fluid d-flex  justify-content-between fx-5"
+        class="container-fluid d-flex justify-content-between align-items-center flex-wrap"
       >
-        <div class="d-flex">
-          <h6 id="barName" class="text-light m-4"></h6>
+        <!-- Sezione Info Traccia -->
+        <div class="track-info d-flex align-items-center flex-grow-1">
           <img
             id="coverSound"
             crossorigin="anonymous"
-            onload="start()"
             src=""
-            class="img-fluid rounded shadowCover"
-            width="60px"
+            class="img-fluid rounded shadow-sm me-2"
+            width="40"
+            height="40"
             alt="Album Cover"
           />
+          <h4 id="barName" class="text-light m-0 text-truncate">
+            Nome traccia
+          </h4>
         </div>
 
-        <div class="controls  align-items-center">
-          <button class="btn-control">
-            <i class="bi bi-arrow-counterclockwise"></i>
+        <!-- Controlli Audio -->
+        <div class="controls d-flex align-items-center gap-2">
+          <button class="btn-control btn btn-dark p-1">
+            <i class="bi bi-skip-backward-fill text-light"></i>
           </button>
-
-          <button class="btn-control">
-            <i class="bi bi-skip-backward-fill"></i>
-          </button>
-          <button id="playPauseBtn" class="btn-play">
+          <button id="playPauseBtn" class="btn btn-play btn-primary p-1">
             <i class="bi bi-play-fill"></i>
           </button>
-          <button class="btn-control">
-            <i class="bi bi-skip-forward-fill"></i>
-          </button>
-          <button class="btn-control">
-            <i class="bi bi-repeat"></i>
+          <button class="btn-control btn btn-dark p-1">
+            <i class="bi bi-skip-forward-fill text-light"></i>
           </button>
         </div>
 
-        <div class="progress-bar-container">
+        <!-- Barra di Progresso -->
+        <div
+          class="progress-bar-container d-flex align-items-center mx-3 flex-grow-1"
+        >
+          <span id="currentTime" class="text-light small me-2">00:00</span>
           <input
             id="audioProgress"
             type="range"
-            class="audio-progress"
+            class="audio-progress w-100"
             value="0"
             min="0"
             max="100"
             step="1"
           />
+          <span id="duration" class="text-light small ms-2">00:00</span>
         </div>
 
-        <!-- Controllo volume -->
+        <!-- Controllo Volume -->
         <div class="volume-control-container d-flex align-items-center">
-          <i class="bi bi-volume-up text-light"></i>
+          <i class="bi bi-volume-up text-light me-2"></i>
           <input
             id="volumeControl"
             type="range"
