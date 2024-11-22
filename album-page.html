@@ -399,13 +399,14 @@
                   style="padding: 8px 15px; margin-right: 15px"
                 >
                   <img
+                    id="imgUtenteMenu"
                     src="./assets/imgs/imgProfile/user_7.jpg"
                     class="rounded-circle me-2"
                     width="40"
                     height="40"
                     alt="User Avatar"
                   />
-                  Serena Ferraro
+                  <span id="nomeUtenteMenu"> Serena Ferraro</span>
                 </button>
 
                 <ul
@@ -628,6 +629,10 @@
       >
         <!-- Sezione Info Traccia -->
         <div class="track-info d-flex align-items-center flex-grow-1">
+    <nav id="soundBar" class="audio-navbar navbar fixed-bottom">
+      <div class="container-fluid d-flex justify-content-between fx-5">
+        <div class="d-flex">
+          <h6 id="barName" class="text-light m-4"></h6>
           <img
             id="coverSound"
             crossorigin="anonymous"
@@ -643,7 +648,7 @@
         </div>
 
         <!-- Controlli Audio -->
-        <div class="controls d-flex align-items-center gap-2">
+        <div class="controlsd-flex align-items-center gap-2">
           <button class="btn-control btn btn-dark p-1">
             <i class="bi bi-skip-backward-fill text-light"></i>
           </button>
@@ -703,5 +708,6 @@
     <script src="assets/JS/album-page.js"></script>
     <script src="assets/JS/music.js"></script>
     <script src="assets/JS/preferiti.js"></script>
+    <script src="assets/JS/utility.js"></script>
   </body>
 </html>
