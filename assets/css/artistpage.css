@@ -122,3 +122,11 @@
     display: none;
   }
 }
+
+button > span{
+  font-size: 0.5em;
+}
+
+#amici{
+  font-size: 0.7em;
+}

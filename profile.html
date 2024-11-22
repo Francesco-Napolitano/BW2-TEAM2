@@ -366,12 +366,16 @@
               style="padding-left: 0px; padding-right: 0px"
             >
               <div
-                class="container-fluid d-flex justify-content-between flex-grow-0 px-3 px-md-5 pt-4"
+                class="container-fluid d-flex align-items-center justify-content-between flex-grow-0 px-md-4 pt-2"
               >
-                <div class="bg-icon bg-black">
+                <div
+                  class="bg-icon bg-black rounded-circle me-2"
+                  width="50"
+                  height="50"
+                >
                   <i
-                    onclick="window.location.href = '/welcome-page.html';"
-                    class="bi bi-arrow-left fs-1"
+                    onclick="window.location.href = './homepage.html';"
+                    class="text-center bi bi-arrow-left fs-3 mt-2"
                   ></i>
                 </div>
                 <div
@@ -380,12 +384,12 @@
                 >
                   <!-- DropDown 1 -->
                   <div
-                    class="user-dropdown mt-5 d-none d-lg-flex justify-content-end w-100 px-5"
+                    class="user-dropdown mt-5 d-none d-lg-flex justify-content-end px-3"
                     style="z-index: 1"
                   >
                     <div class="dropdown d-flex flex-column align-items-center">
                       <button
-                        class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center fs-4"
+                        class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center fs-5"
                         type="button"
                         data-bs-toggle="dropdown"
                         data-bs-offset="0,10"
@@ -393,13 +397,13 @@
                         style="padding: 8px 15px"
                       >
                         <img
-                          src="./assets/imgs/user 4.webp"
+                          src="./assets/imgs/imgProfile/user 4.webp"
                           class="rounded-circle me-2"
-                          width="50"
-                          height="50"
+                          width="25"
+                          height="25"
                           alt="User Avatar"
                         />
-                        Serena Ferraro
+                        <span> Serena Ferraro</span>
                       </button>
                       <ul
                         class="dropdown-menu dropdown-menu-end bg-dark border-0 shadow-lg"
@@ -426,7 +430,7 @@
                       <button
                         id="amici"
                         onclick="console.log('ciao')"
-                        class="btn btn-dark rounded-pill mt-2 d-none d-xl-block border-2 text-light"
+                        class="btn btn-dark rounded-pill mt-2 d-none d-xl-block border-2 text-light fs-6"
                         style="z-index: 2"
                       >
                         Lista amici
@@ -434,9 +438,13 @@
                     </div>
                   </div>
                   <!-- DropDown 2 -->
-                  <div class="dropdown bg-icon bg-black">
+                  <div
+                    class="dropdown bg-icon align-items-center bg-black rounded-circle pt-1"
+                    width="50"
+                    height="50"
+                  >
                     <i
-                      class="bi bi-gear fs-1"
+                      class="bi bi-gear fs-3"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -475,9 +483,7 @@
                 class="container d-flex flex-column justify-content-center pt-lg-5"
               >
                 <ul class="list-group list-group-flush">
-                  <div class="row listInfo">
-                    
-                  </div>
+                  <div class="row listInfo"></div>
                 </ul>
               </div>
               <button
@@ -495,9 +501,9 @@
           <div id="colonna-destra" class="d-none col-xl-2">
             <div class="p-4">
               <div
-                class="d-flex justify-content-between align-items-center mt-4"
+                class="d-flex justify-content-between align-items-center mt-4 flex-column"
               >
-                <h4 class="text-light">Attività amici</h4>
+                <h4 class="text-light fs-6">Attività amici</h4>
                 <div>
                   <i class="bi bi-person-plus text-light fs-5 me-4"></i>
 
@@ -515,7 +521,7 @@
                   >
                     <div class="d-flex align-items-center">
                       <img
-                        src="./assets/imgs/user1.webp"
+                        src="./assets/imgs/imgProfile/user1.webp"
                         class="rounded-circle me-3"
                         width="60px"
                         height="60px"
@@ -534,7 +540,7 @@
                   >
                     <div class="d-flex align-items-center">
                       <img
-                        src="./assets/imgs/user 2.jpg"
+                        src="./assets/imgs/imgProfile/user 2.jpg"
                         class="rounded-circle me-3"
                         width="60px"
                         height="60px"
@@ -553,7 +559,7 @@
                   >
                     <div class="d-flex align-items-center">
                       <img
-                        src="./assets/imgs/user 3.jpeg"
+                        src="./assets/imgs/imgProfile/user 3.jpeg"
                         class="rounded-circle me-3"
                         width="60px"
                         height="60px"
