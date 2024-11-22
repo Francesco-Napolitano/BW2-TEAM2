@@ -1,5 +1,5 @@
 class SpotifyUser {
-  constructor(nome, cognome, sesso, eta, paese, email, password) {
+  constructor(nome, cognome, sesso, eta, paese, email, password, urlIMG) {
     this.nome = nome;
     this.cognome = cognome;
     this.sesso = sesso;
@@ -7,6 +7,7 @@ class SpotifyUser {
     this.paese = paese;
     this.email = email;
     this.password = password;
+    this.urlIMG = urlIMG;
   }
 }
 
@@ -122,12 +123,10 @@ const Modifica = function () {
   });
 };
 
-const Esci = function () {
-  localStorage.removeItem("FlagLogin");
-  window.location.href = "../../welcome-page.html";
-};
-
 const ProfileImg = document.getElementById("ProfileImg");
+console.log(datiDB.urlIMG);
+console.log(ProfileImg);
+ProfileImg.setAttribute("src", `${datiDB.urlIMG}`);
 
 const colonnaDestra = document.getElementById("colonna-destra");
 const colonnaCentrale = document.getElementById("colonna-centrale");
