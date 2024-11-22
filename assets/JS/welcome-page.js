@@ -21,7 +21,7 @@ if (
   });
 
   class SpotifyUser {
-    constructor(nome, cognome, sesso, eta, paese, email, password) {
+    constructor(nome, cognome, sesso, eta, paese, email, password, urlIMG) {
       this.nome = nome;
       this.cognome = cognome;
       this.sesso = sesso;
@@ -29,6 +29,7 @@ if (
       this.paese = paese;
       this.email = email;
       this.password = password;
+      this.urlIMG = urlIMG;
     }
   }
 
@@ -52,8 +53,15 @@ if (
       eta,
       paese,
       email,
-      password
+      password,
+      ""
     );
+
+    if (newUser.sesso === "Maschio") {
+      newUser.urlIMG = "/assets/imgs/imgProfile/user_5.jpg";
+    } else {
+      newUser.urlIMG = "/assets/imgs/imgProfile/user_7.jpg";
+    }
 
     alert(`Utente registrato con successo !`);
 
@@ -66,6 +74,8 @@ if (
 
     localStorage.setItem("User", JSON.stringify(newUser));
 
+    localStorage.setItem("FlagLogin", "1");
+    
     window.location.href = "../../homepage.html";
   });
 
