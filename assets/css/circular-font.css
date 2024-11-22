@@ -76,7 +76,7 @@ ul.list-unstyled li:hover .bg-success {
 
 #colonna-destra,
 #colonna-sinistra {
-  background-color: rgba(0, 0, 0, 0.933) !important;
+  background-color: rgba(0, 0, 0) !important;
 }
 
 #colonna-centrale {

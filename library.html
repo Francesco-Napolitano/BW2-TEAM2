@@ -1,99 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Library</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS v5.2.1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spotify - library Page</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/library.css" />
-    <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link
       rel="icon"
       sizes="192x192"
-      href="/assets/imgs/Spotify_Icon_Green.svg"
+      href="/assets/imgs/loghi/Spotify_Icon_Green.svg"
       type="image/png"
     />
+    <link rel="stylesheet" href="assets/css/circular-font.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
   </head>
-
-  <body class="bg-dark">
-    <header>
-      <nav class="m-0 d-lg-none navbar px-4 opacity-75 fixed-bottom">
+  <body class="bg-black">
+    <header class="text-white">
+      <nav
+        class="navbar px-4 fixed-bottom justify-content-center d-lg-none"
+        style="bottom: -2px"
+      >
         <div class="container">
-          <a class="navbar-brand" href="homepage.html">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center text-white"
-            >
-              <i class="bi bi-house-door-fill fs-1"></i>
-              <p style="font-size: 0.8em" class="m-0">Home</p>
-            </div>
-          </a>
-          <a class="navbar-brand" href="search.html">
+          <a class="navbar-brand" href="/homepage.html">
             <div
               class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
             >
-              <i class="bi bi-search fs-1"></i>
+              <i class="bi bi-house-door fs-1"></i>
+              <p style="font-size: 0.8em" class="m-0">Home</p>
+            </div>
+          </a>
+          <a class="navbar-brand" href="/search.html">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center text-white"
+            >
+              <i class="bi bi-search fs-1 fw-bold"></i>
               <p style="font-size: 0.8em" class="m-0">Cerca</p>
             </div>
           </a>
-          <a class="navbar-brand" href="#">
-            <div class="d-flex">
-              <div
-                class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
-              >
-                <i class="bi bi-collection-play fs-1"></i>
-                <p style="font-size: 0.8em" class="m-0">Libreria</p>
-              </div>
-              <div
-                class="d-flex flex-column align-items-center justify-content-center text-white opacity-75 ms-5"
-              >
-                <i class="bi bi-plus-lg fs-1"></i>
-                <p style="font-size: 0.8em" class="m-0">Crea</p>
-              </div>
+          <a class="navbar-brand" href="/library.html">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center text-white opacity-75"
+            >
+              <i class="bi bi-collection-play fs-1"></i>
+              <p style="font-size: 0.8em" class="m-0">Libreria</p>
             </div>
           </a>
         </div>
       </nav>
-      <div class="container mt-5 d-flex justify-content-between">
-        <div class="d-flex align-items-center">
-          <img
-            src="./assets/imgs/user 4.webp"
-            class="rounded-circle"
-            width="30px"
-            height="30px"
-            alt=""
-          />
-          <h3 class="text-white ms-2">La tua libreria</h3>
-        </div>
-        <div class="align-items-center">
-          <i class="bi bi-search fs-4 text-white me-2"></i>
-          <i class="bi bi-plus-lg fs-4 text-white"></i>
-        </div>
-      </div>
-      <div class="mt-4 ms-3">
-        <button class="btn btn-secondary me-2 rounded-pill">Playlist</button>
-        <button class="btn btn-secondary rounded-pill">Artist</button>
-      </div>
-      <hr class="text-black" />
     </header>
     <main>
       <div class="container-fluid">
         <div class="row">
-          <!-- Colonna sinistra -->
+          <!-- COLONNA SINISTRA -->
+
           <div
             id="colonna-sinistra"
             class="d-none d-xl-block col-xl-3"
@@ -157,18 +125,6 @@
                     class="text-light text-decoration-none fs-5"
                     href="./album-page.html?id=branipreferiti"
                     >Brani che ti piacciono</a
-                  >
-                </li>
-
-                <li class="d-flex align-items-center mb-4">
-                  <div
-                    class="bg-success d-flex align-items-center justify-content-center p-2 me-3 fs-5"
-                    style="border-radius: 50%; width: 40px; height: 40px"
-                  >
-                    <i class="bi bi-bookmark text-black fs-4"></i>
-                  </div>
-                  <a class="text-light text-decoration-none fs-5" href="#"
-                    >I tuoi episodi</a
                   >
                 </li>
               </ul>
@@ -408,568 +364,267 @@
             </div>
           </div>
 
-          <!-- Colonna centrale -->
+          <!-- COLONNA CENTRALE -->
+
           <div
             id="colonna-centrale"
-            style="
-              height: 100vh;
-              overflow-y: auto;
-              overflow-x: hidden;
-              padding-left: 0px;
-              padding-right: 0px;
-            "
-            class="col col-xl-9 album"
+            style="height: 100vh; overflow-x: hidden"
+            class="col col-xl-9 px-0"
           >
+            <!-- Search Section -->
             <div
-              class="container-fluid d-none d-lg-block"
-              id="top-album-container"
-              style="padding-left: 0px; padding-right: 0px"
+              id="SearchContainer"
+              style="height: 100vh"
+              class="container-fluid scrol d-flex flex-column pb-5 mb-5 pb-lg-0 pmb-lg-0"
             >
               <div
-                id="carouselExampleCaptions"
-                class="carousel slide position-relative"
-                data-bs-ride="carousel"
-                data-bs-interval="3000"
-                style="height: 50vh; overflow: hidden"
+                class="position-relative top-0 start-0 w-100 d-flex justify-content-between align-items-start p-3"
               >
-                <!-- User Dropdown -->
-                <div
-                  class="user-dropdown mt-5 d-none d-lg-flex justify-content-end position-absolute w-100 px-5"
-                  style="z-index: 1"
-                >
-                  <div
-                    class="dropdown d-flex flex-column align-items-center position-relative"
+                <!-- Freccia (dispositivi piccoli e grandi) -->
+                <i
+                  class="bi bi-arrow-left fs-2 bg-transparent text-white d-lg-none"
+                ></i>
+                <a class="text-white d-none d-lg-block" href="/homepage.html">
+                  <i class="bi bi-arrow-left-circle-fill fs-1"></i>
+                </a>
+
+                <!-- Dropdown -->
+                <div class="dropdown">
+                  <button
+                    class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="padding: 5px 15px"
                   >
-                    <button
-                      class="btn btn-dark badge rounded-pill dropdown-toggle d-flex align-items-center fs-4"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      data-bs-offset="0,10"
-                      aria-expanded="false"
-                      style="padding: 8px 15px"
+                    <img
+                      id="profile"
+                      src="./assets/imgs/imgProfile/user_7.jpg"
+                      class="rounded-circle me-2"
+                      width="40"
+                      height="40"
+                      alt="User Avatar"
+                    />
+                    <p class="fs-5 pt-2 px-2">Serena Ferraro</p>
+                  </button>
+                  <ul
+                    class="dropdown-menu bg-dark border-0 shadow-lg"
+                    style="min-width: 200px"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item text-light d-flex align-items-center"
+                        href="./profile.html"
+                      >
+                        <i class="bi bi-gear pe-3"></i>
+                        Impostazioni
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-light d-flex align-items-center"
+                        href="./welcome-page.html"
+                        onclick="esci()"
+                      >
+                        <i class="bi bi-person-circle pe-3"></i>
+                        Esci
+                      </a>
+                    </li>
+                  </ul>
+                  <button
+                    id="amici"
+                    class="btn btn-dark rounded-pill mt-3 ms-3 d-none d-xl-block fs-5"
+                  >
+                    Lista amici
+                  </button>
+                </div>
+              </div>
+              <h1
+                href="search.html"
+                class="text-white my-2 mb-2 fs-1 ps-3 text-decoration-none"
+              >
+                La tua libreria :
+              </h1>
+
+              <div
+                id="Category"
+                class="flex-grow-1 row row-cols-2 row-cols-xl-3 g-3 justify-content-end"
+              >
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a
+                      class="text-decoration-none text-white"
+                      href="/playlistpage.html?id=IndieRock"
+                      ><p class="flex-grow-1">Early Stage</p></a
                     >
-                      <img
-                        src="./assets/imgs/imgProfile/user 4.webp"
-                        class="rounded-circle me-2"
-                        width="20"
-                        height="20"
-                        alt="User Avatar"
-                      />
-                      <span>Serena Ferraro </span>
-                    </button>
-                    <ul
-                      class="dropdown-menu dropdown-menu-end bg-dark border-0 shadow-lg"
-                      style="min-width: 200px"
-                    >
-                      <li>
-                        <a
-                          class="dropdown-item text-light d-flex align-items-center"
-                          href="./profile.html"
-                        >
-                          <i class="bi bi-gear pe-3"></i> Impostazioni
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item text-light d-flex align-items-center"
-                          href="./welcome-page.html"
-                          onclick="esci()"
-                        >
-                          <i class="bi bi-person-circle pe-3"></i> Esci
-                        </a>
-                      </li>
-                    </ul>
-                    <button
-                      id="amici"
-                      onclick="console.log('ciao')"
-                      class="btn btn-dark rounded-pill mt-2 d-none d-xl-block border-2 text-light"
-                      style="z-index: 2"
-                    >
-                      Lista amici
-                    </button>
+                    <img
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/4629625/pexels-photo-4629625.jpeg"
+                      alt="image Playlist"
+                    />
                   </div>
                 </div>
-
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="3"
-                    aria-label="Slide 4"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="4"
-                    aria-label="Slide 5"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="5"
-                    aria-label="Slide 6"
-                  ></button>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=AltRock"
+                      ><p class="flex-grow-1">Be the Young</p></a
+                    >
+                    <img
+                      class="position-absolute bottom-0"
+                      src="/assets/imgs/search/image-15.jpg"
+                      alt="image Playlist"
+                    />
+                  </div>
                 </div>
-
-                <!-- Carousel Content -->
-                <div class="carousel-inner">
-                  <!-- First Slide -->
-                  <div class="carousel-item active">
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=IndiePop"
+                      ><p class="flex-grow-1">Kimiko Vibes</p></a
+                    >
                     <img
-                      src="/assets/imgs/imgWelcomePage/imgMusic2.jpg"
-                      class="d-block w-100"
-                      alt="Music Party"
-                      style="transform: translateY(-15%); opacity: 0.6"
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/1762578/pexels-photo-1762578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="image Playlist"
                     />
                   </div>
-
-                  <!-- Second Slide -->
-                  <div class="carousel-item">
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=Afrobeat">
+                      <p class="flex-grow-1">AfroBeat</p></a
+                    >
                     <img
-                      src="/assets/imgs/imgCaroselloHome/img_1.jpg"
-                      class="d-block w-100"
-                      alt="Second Slide"
-                      style="transform: translateY(-15%); opacity: 0.6"
+                      class="position-absolute bottom-0"
+                      src="/assets/imgs/search/image-17.jpg"
+                      alt="image Playlist"
                     />
                   </div>
-
-                  <!-- Third Slide -->
-                  <div class="carousel-item">
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=Pop"
+                      ><p class="flex-grow-1">Pop</p></a
+                    >
                     <img
-                      src="/assets/imgs/imgCaroselloHome/img_2.jpg"
-                      class="d-block w-100"
-                      alt="Third Slide"
-                      style="opacity: 0.6"
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/29479795/pexels-photo-29479795/free-photo-of-giovane-donna-che-soffia-un-chewing-gum-da-vicino.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="image Playlist"
                     />
                   </div>
-
-                  <!-- Quarto Slide -->
-                  <div class="carousel-item">
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a href="/playlistpage.html?id=ChillBeats" class="text-white"
+                      ><p class="flex-grow-1">Chill Beats</p></a
+                    >
                     <img
-                      src="/assets/imgs/imgCaroselloHome/img_3.jpg"
-                      class="d-block w-100"
-                      alt="Third Slide"
-                      style="opacity: 0.6"
+                      class="position-absolute bottom-0"
+                      src="/assets/imgs/search/image-19.jpg"
+                      alt="image Playlist"
                     />
                   </div>
-
-                  <!-- Quinto Slide -->
-                  <div class="carousel-item">
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=Experimental"
+                      ><p class="flex-grow-1">Experimental</p></a
+                    >
                     <img
-                      src="/assets/imgs/imgCaroselloHome/img_4.jpg"
-                      class="d-block w-100"
-                      alt="Third Slide"
-                      style="opacity: 0.6"
+                      class="position-absolute bottom-0"
+                      src="/assets/imgs/search/image-25.jpeg"
+                      alt="image Playlist"
                     />
                   </div>
-                  <!-- Sesto Slide -->
-                  <div class="carousel-item">
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=Meshup"
+                      ><p class="flex-grow-1">Meshup</p></a
+                    >
                     <img
-                      src="/assets/imgs/imgCaroselloHome/img_5.jpg"
-                      class="d-block w-100"
-                      alt="Third Slide"
-                      style="opacity: 0.6"
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/3152174/pexels-photo-3152174.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="image Playlist"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=Chillwave"
+                      ><p class="flex-grow-1">Chill Wave</p></a
+                    >
+                    <img
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/7335183/pexels-photo-7335183.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="image Playlist"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=CencetrationMusic"
+                      ><p class="flex-grow-1">ConcentrationMusic</p></a
+                    >
+                    <img
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/9529373/pexels-photo-9529373.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt="image Playlist"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=RelaxingTunes">
+                      <p class="flex-grow-1">Relaxing</p></a
+                    >
+                    <img
+                      class="position-absolute bottom-0"
+                      src="https://images.pexels.com/photos/15020813/pexels-photo-15020813/free-photo-of-alba-paesaggio-natura-tramonto.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="image Playlist"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="p-2 d-flex justify-content-between text-white position-relative"
+                  >
+                    <a class="text-white" href="/playlistpage.html?id=RelaxingTunes">
+                      <p class="flex-grow-1">Before Sleeping</p></a
+                    >
+                    <img
+                      class="position-absolute bottom-0"
+                      src="assets/imgs/search/image-18.jpg"
+                      alt="image Playlist"
                     />
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- BUONA SERA -->
-
-            <section class="ms-4 mt-3">
-              <div class="mt-3">
-                <div
-                  class="fs-1 text-white d-flex gap-3 justify-content-end mb-2 d-lg-none pe-5"
-                  id="icon-container"
-                >
-                  <i class="bi bi-bell"></i>
-                  <i class="bi bi-stopwatch"></i>
-                  <i class="bi bi-gear"></i>
-                </div>
-                <h1 id="salutoUtente" class="text-white fs-1 mb-4">Ciao !</h1>
-              </div>
-            </section>
-
-            <section id="albumHome" class="container-fluid">
-              <div class="row g-3 mx-2">
-                <div class="col col-6 col-lg-4">
-                  <div class="d-flex align-items-center text-white">
-                    <img
-                      class="img-fluid"
-                      src="./assets/imgs/liked song.png"
-                      alt=""
-                    />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
-                    >
-                      Brani che ti piacciono
-                    </p>
-                  </div>
-                </div>
-                <div class="col col-6 col-lg-4">
-                  <div class="d-flex align-items-center text-white">
-                    <img
-                      class="img-fluid"
-                      src="./assets/imgs/search/image-1.jpeg"
-                      alt=""
-                    />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
-                    >
-                      Your discover weekly
-                    </p>
-                  </div>
-                </div>
-                <div class="col col-6 col-lg-4">
-                  <div class="d-flex align-items-center text-white">
-                    <img
-                      class="img-fluid"
-                      src="./assets/imgs/search/image-10.jpg"
-                      alt=""
-                    />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
-                    >
-                      Saggio vibes 💃🩰
-                    </p>
-                  </div>
-                </div>
-                <div class="col col-6 col-lg-4">
-                  <div class="d-flex align-items-center text-white">
-                    <img
-                      class="img-fluid"
-                      src="./assets/imgs/search/image-12.jpg"
-                      alt=""
-                    />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
-                    >
-                      Brani che ti piacciono
-                    </p>
-                  </div>
-                </div>
-                <div class="col col-6 col-lg-4">
-                  <div class="d-flex align-items-center text-white">
-                    <img
-                      class="img-fluid"
-                      src="./assets/imgs/search/image-13.jpeg"
-                      alt=""
-                    />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
-                    >
-                      Be The Young
-                    </p>
-                  </div>
-                </div>
-                <div class="col col-6 col-lg-4">
-                  <div class="d-flex align-items-center text-white">
-                    <img
-                      class="img-fluid"
-                      src="./assets/imgs/search/image-14.jpg"
-                      alt=""
-                    />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
-                    >
-                      Deep Dive with Ali Ab...
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section id="playlist">
-              <div class="container-fluid">
-                <h2 class="text-white mt-5 mx-3">Le playlist più ascoltate:</h2>
-                <div
-                  class="row row-cols-1 row-cols-lg-5 justify-content-center align-items-center my-4 gap-3 mx-3"
-                >
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://t3.ftcdn.net/jpg/02/97/00/28/360_F_297002806_sGFgV1oPMgeuRfAJpgF01p3RduNGDIxw.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Study and work space
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">16 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://www.cygnusmusic.net/wp-content/uploads/2023/06/This-Is-Playlist.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          This is Snoop Dogg
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">30 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c41cb99a5051e4b1034622284"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Only Rolling Stones
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">20 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://i1.sndcdn.com/artworks-zWFpCflzYN8yyAZQ-xMXzlw-t500x500.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Alternative rock mix
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">44 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://cdn-d.smehost.net/sites/eca8caccee084ea1a6d20780b8091381/wp-content/uploads/2022/12/degregori.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Canzoni anni 70'
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">35 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://images.genius.com/9118a64d842f1611d83f5090989a3475.788x788x1.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Canzoni anni 90'
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">47 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://www.spettacolo.net/foto/g-391a.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Canzoni anni 80'
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">33 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col flex-grow-1">
-                    <div class="p-3 d-flex flex-column text-white gap-3">
-                      <div
-                        class="d-flex gap-3 flex-lg-column align-items-lg-center"
-                      >
-                        <img
-                          src="https://www.homolaicus.com/arte/images/de-andre.jpg"
-                          class="images-playlist object-fit-cover"
-                          alt="playlist"
-                        />
-                        <p class="fw-bold fs-5">
-                          <span class="fs-6 fw-normal text-secondary"
-                            >Playlist</span
-                          >
-                          <br />
-                          Canzoni anni 60'
-                        </p>
-                      </div>
-                      <div
-                        class="d-flex justify-content-between fs-3 align-items-center"
-                      >
-                        <div class="fs-5 me-xl-1">
-                          <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="align-items-center d-flex gap-4">
-                          <span class="fs-6 text-secondary">13 brani</span>
-                          <i class="bi bi-play-circle"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
           </div>
 
-          <!-- Colonna di destra -->
+          <!-- COLONNA DESTRA -->
           <div id="colonna-destra" class="d-none col-xl-2">
             <div class="p-4">
               <!-- Header -->
@@ -985,58 +640,101 @@
               <hr class="text-white my-4" />
 
               <!-- Scrollable Section -->
-              <div class="scrollable-section">
-                <ul class="list-unstyled mb-0">
+              <div class="scrollable-section text-white">
+                <ul class="list-unstyled text-white">
                   <!-- Singolo elemento -->
-                  <li class="list-item">
-                    <div class="content">
-                      <img
-                        src="./assets/imgs/imgProfile/user1.webp"
-                        class="avatar"
-                        alt="Charlie Hookham"
-                      />
-                      <div class="details">
-                        <h6>Charlie Hookham</h6>
-                        <p>In Camera · Yumi Zouma</p>
-                        <p><i class="bi bi-pause-circle"></i> EP III</p>
+                  <li
+                    class="list-item rounded-2 d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="content d-flex flex-column align-items-center">
+                      <div
+                        class="avatar-wrapper d-flex justify-content-center align-items-center bg-light"
+                        style="width: 65px; height: 65px; border-radius: 10px"
+                      >
+                        <img
+                          src="./assets/imgs/imgProfile/user_1.jpg"
+                          class="img-fluid"
+                          style="
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          "
+                          alt="Charlie Hookham"
+                        />
                       </div>
-                    </div>
-                    <p class="hour">4 ore</p>
-                  </li>
-
-                  <li class="list-item">
-                    <div class="content">
-                      <img
-                        src="./assets/imgs/imgProfile/user 2.jpg"
-                        class="avatar"
-                        alt="lightdark02"
-                      />
-                      <div class="details">
-                        <h6>lightdark02</h6>
-                        <p>Aimed to kill · Jade LeMac</p>
-                        <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
-                      </div>
-                    </div>
-                    <p class="hour">8 ore</p>
-                  </li>
-
-                  <li class="list-item">
-                    <div class="content">
-                      <img
-                        src="./assets/imgs/imgProfile/user 3.jpeg"
-                        class="avatar"
-                        alt="Valeria Traverso"
-                      />
-                      <div class="details">
-                        <h6>Valeria Traverso</h6>
-                        <p>New Kings · Sleeping wolf</p>
-                        <p>
-                          <i class="bi bi-music-note-beamed"></i> Twist bedass
-                          mood
+                      <div class="details mt-3 text-center text-white">
+                        <h6 class="mb-1">Charlie Hookham</h6>
+                        <p class="mb-0">In Camera · Yumi Zouma</p>
+                        <p class="mb-0">
+                          <i class="bi bi-pause-circle"></i> EP III
+                          <span class="hour text-muted mb-0 ps-4">4 ore</span>
                         </p>
                       </div>
                     </div>
-                    <p class="hour">4 ore</p>
+                  </li>
+
+                  <li
+                    class="list-item rounded-2 d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="content d-flex flex-column align-items-center">
+                      <div
+                        class="avatar-wrapper d-flex justify-content-center align-items-center bg-light"
+                        style="width: 65px; height: 65px; border-radius: 10px"
+                      >
+                        <img
+                          src="./assets/imgs/imgProfile/user_2.jpg"
+                          class="img-fluid"
+                          style="
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          "
+                          alt="lightdark02"
+                        />
+                      </div>
+                      <div class="details mt-3 text-center text-white">
+                        <h6 class="mb-1">lightdark02</h6>
+                        <p class="mb-0">Aimed to kill · Jade LeMac</p>
+                        <p class="mb-0">
+                          <i class="bi bi-pause-circle"></i> Aimed to Kill
+                          <span class="hour text-muted mb-0 ps-4">8 ore</span>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li
+                    class="list-item rounded-2 d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="content d-flex flex-column align-items-center">
+                      <div
+                        class="avatar-wrapper d-flex justify-content-center align-items-center bg-light"
+                        style="width: 65px; height: 65px; border-radius: 10px"
+                      >
+                        <img
+                          src="./assets/imgs/imgProfile/user_3.jpg"
+                          class="img-fluid"
+                          style="
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          "
+                          alt="Valeria Traverso"
+                        />
+                      </div>
+                      <div class="details mt-3 text-center text-white">
+                        <h6 class="mb-1">Valeria Traverso</h6>
+                        <p class="mb-0">New Kings · Sleeping wolf</p>
+                        <p class="mb-0">
+                          <i class="bi bi-music-note-beamed"></i> Twist bedass
+                          mood
+                          <span class="hour text-muted mb-0 ps-5">4 ore</span>
+                        </p>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -1045,21 +743,12 @@
         </div>
       </div>
     </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/JS/library.js"></script>
+    <script src="assets/JS/search.js"></script>
+    <script src="assets/JS/music.js"></script>
   </body>
 </html>

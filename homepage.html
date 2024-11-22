@@ -17,7 +17,7 @@
     <link
       rel="icon"
       sizes="192x192"
-      href="/assets/imgs/Spotify_Icon_Green.svg"
+      href="/assets/imgs/loghi/Spotify_Icon_Green.svg"
       type="image/png"
     />
     <link rel="stylesheet" href="assets/css/circular-font.css" />
@@ -124,18 +124,6 @@
                     class="text-light text-decoration-none fs-5"
                     href="./album-page.html?id=branipreferiti"
                     >Brani che ti piacciono</a
-                  >
-                </li>
-
-                <li class="d-flex align-items-center mb-4">
-                  <div
-                    class="bg-success d-flex align-items-center justify-content-center p-2 me-3 fs-5"
-                    style="border-radius: 50%; width: 40px; height: 40px"
-                  >
-                    <i class="bi bi-bookmark text-black fs-4"></i>
-                  </div>
-                  <a class="text-light text-decoration-none fs-5" href="#"
-                    >I tuoi episodi</a
                   >
                 </li>
               </ul>
@@ -416,10 +404,10 @@
                       style="padding: 8px 15px"
                     >
                       <img
-                        src="./assets/imgs/imgProfile/user 4.webp"
+                        src="./assets/imgs/imgProfile/user_7.jpg"
                         class="rounded-circle me-2"
-                        width="20"
-                        height="20"
+                        width="40"
+                        height="40"
                         alt="User Avatar"
                       />
                       <span>Serena Ferraro </span>
@@ -602,11 +590,16 @@
                       src="./assets/imgs/search/image-1.jpeg"
                       alt=""
                     />
-                    <p
-                      class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
+                    <a
+                      class="text-decoration-none text-center text-white"
+                      href="/playlistpage.html?id=IndieRock"
                     >
-                      Your discover weekly
-                    </p>
+                      <p
+                        class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
+                      >
+                        Your discover weekly
+                      </p></a
+                    >
                   </div>
                 </div>
                 <div class="col col-6 col-lg-4">
@@ -633,7 +626,7 @@
                     <p
                       class="ms-2 mb-0 text-center flex-grow-1 fs-lg-4 fw-medium fw-lg-bold"
                     >
-                      Brani che ti piacciono
+                      Music Drive Car
                     </p>
                   </div>
                 </div>
@@ -697,7 +690,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">16 brani</span>
@@ -729,7 +721,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">30 brani</span>
@@ -762,7 +753,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">20 brani</span>
@@ -794,7 +784,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">44 brani</span>
@@ -826,7 +815,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">35 brani</span>
@@ -858,7 +846,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">47 brani</span>
@@ -890,7 +877,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">33 brani</span>
@@ -922,7 +908,6 @@
                       >
                         <div class="fs-5 me-xl-1">
                           <i class="bi bi-suit-heart"></i>
-                          <i class="bi bi-three-dots-vertical"></i>
                         </div>
                         <div class="align-items-center d-flex gap-4">
                           <span class="fs-6 text-secondary">13 brani</span>
@@ -952,58 +937,101 @@
               <hr class="text-white my-4" />
 
               <!-- Scrollable Section -->
-              <div class="scrollable-section">
-                <ul class="list-unstyled mb-0">
+              <div class="scrollable-section text-white">
+                <ul class="list-unstyled text-white">
                   <!-- Singolo elemento -->
-                  <li class="list-item">
-                    <div class="content">
-                      <img
-                        src="./assets/imgs/imgProfile/user1.webp"
-                        class="avatar"
-                        alt="Charlie Hookham"
-                      />
-                      <div class="details">
-                        <h6>Charlie Hookham</h6>
-                        <p>In Camera · Yumi Zouma</p>
-                        <p><i class="bi bi-pause-circle"></i> EP III</p>
+                  <li
+                    class="list-item rounded-2 d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="content d-flex flex-column align-items-center">
+                      <div
+                        class="avatar-wrapper d-flex justify-content-center align-items-center bg-light"
+                        style="width: 65px; height: 65px; border-radius: 10px"
+                      >
+                        <img
+                          src="./assets/imgs/imgProfile/user_1.jpg"
+                          class="img-fluid"
+                          style="
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          "
+                          alt="Charlie Hookham"
+                        />
                       </div>
-                    </div>
-                    <p class="hour">4 ore</p>
-                  </li>
-
-                  <li class="list-item">
-                    <div class="content">
-                      <img
-                        src="./assets/imgs/imgProfile/user 2.jpg"
-                        class="avatar"
-                        alt="lightdark02"
-                      />
-                      <div class="details">
-                        <h6>lightdark02</h6>
-                        <p>Aimed to kill · Jade LeMac</p>
-                        <p><i class="bi bi-pause-circle"></i> Aimed to Kill</p>
-                      </div>
-                    </div>
-                    <p class="hour">8 ore</p>
-                  </li>
-
-                  <li class="list-item">
-                    <div class="content">
-                      <img
-                        src="./assets/imgs/imgProfile/user 3.jpeg"
-                        class="avatar"
-                        alt="Valeria Traverso"
-                      />
-                      <div class="details">
-                        <h6>Valeria Traverso</h6>
-                        <p>New Kings · Sleeping wolf</p>
-                        <p>
-                          <i class="bi bi-music-note-beamed"></i> Twist bedass
-                          mood
+                      <div class="details mt-3 text-center text-white">
+                        <h6 class="mb-1">Charlie Hookham</h6>
+                        <p class="mb-0">In Camera · Yumi Zouma</p>
+                        <p class="mb-0">
+                          <i class="bi bi-pause-circle"></i> EP III
+                          <span class="hour text-muted mb-0 ps-4">4 ore</span>
                         </p>
                       </div>
                     </div>
-                    <p class="hour">4 ore</p>
+                  </li>
+
+                  <li
+                    class="list-item rounded-2 d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="content d-flex flex-column align-items-center">
+                      <div
+                        class="avatar-wrapper d-flex justify-content-center align-items-center bg-light"
+                        style="width: 65px; height: 65px; border-radius: 10px"
+                      >
+                        <img
+                          src="./assets/imgs/imgProfile/user_2.jpg"
+                          class="img-fluid"
+                          style="
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          "
+                          alt="lightdark02"
+                        />
+                      </div>
+                      <div class="details mt-3 text-center text-white">
+                        <h6 class="mb-1">lightdark02</h6>
+                        <p class="mb-0">Aimed to kill · Jade LeMac</p>
+                        <p class="mb-0">
+                          <i class="bi bi-pause-circle"></i> Aimed to Kill
+                          <span class="hour text-muted mb-0 ps-4">8 ore</span>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li
+                    class="list-item rounded-2 d-flex justify-content-between align-items-center p-3"
+                  >
+                    <div class="content d-flex flex-column align-items-center">
+                      <div
+                        class="avatar-wrapper d-flex justify-content-center align-items-center bg-light"
+                        style="width: 65px; height: 65px; border-radius: 10px"
+                      >
+                        <img
+                          src="./assets/imgs/imgProfile/user_3.jpg"
+                          class="img-fluid"
+                          style="
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          "
+                          alt="Valeria Traverso"
+                        />
+                      </div>
+                      <div class="details mt-3 text-center text-white">
+                        <h6 class="mb-1">Valeria Traverso</h6>
+                        <p class="mb-0">New Kings · Sleeping wolf</p>
+                        <p class="mb-0">
+                          <i class="bi bi-music-note-beamed"></i> Twist bedass
+                          mood
+                          <span class="hour text-muted mb-0 ps-5">4 ore</span>
+                        </p>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
