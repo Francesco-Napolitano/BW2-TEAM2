@@ -68,3 +68,11 @@ option {
   background-color: #282525d2;
   color: white;
 }
+
+button > span{
+  font-size: 0.7em;
+}
+
+#amici{
+  font-size: 0.8em;
+}
