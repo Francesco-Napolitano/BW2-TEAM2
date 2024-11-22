@@ -14,22 +14,22 @@ const datiDB = JSON.parse(localStorage.getItem("User"));
 const row_item = document.getElementsByClassName("listInfo");
 
 row_item[0].innerHTML = ` 
-           <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-5">
+           <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Nome : ${datiDB.nome}
             </li>
-            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-5">
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Cognome : ${datiDB.cognome}
             </li>
-            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-5">
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Sesso : ${datiDB.sesso}
             </li>
-            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-5">
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Età : ${datiDB.eta}
             </li>
-            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-5">
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Paese : ${datiDB.paese}
             </li>
-            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-5">
+            <li class="list-group-item mx-auto mt-2 mb-2 col-10 col-lg-7 col-xl-7">
               Email : ${datiDB.email}
             </li>`;
 
@@ -129,23 +129,23 @@ const Esci = function () {
 
 const ProfileImg = document.getElementById("ProfileImg");
 
-const colonnaDestra = document.getElementById('colonna-destra')
-const colonnaCentrale = document.getElementById('colonna-centrale')
-const iconX = document.getElementById('icon-x')
-const amici = document.getElementById('amici')
+const colonnaDestra = document.getElementById("colonna-destra");
+const colonnaCentrale = document.getElementById("colonna-centrale");
+const iconX = document.getElementById("icon-x");
+const amici = document.getElementById("amici");
 
-amici.addEventListener('click', () => {
-  colonnaCentrale.classList.remove('col-xl-9')
-  colonnaCentrale.classList.add('col-xl-7')
-  colonnaDestra.classList.remove('d-none')
-  colonnaDestra.classList.add('col-xl-block')
-  amici.classList.remove('d-xl-block')
-})
+amici.addEventListener("click", () => {
+  colonnaCentrale.classList.remove("col-xl-9");
+  colonnaCentrale.classList.add("col-xl-7");
+  colonnaDestra.classList.remove("d-none");
+  colonnaDestra.classList.add("col-xl-block");
+  amici.classList.remove("d-xl-block");
+});
 
-iconX.addEventListener('click', () => {
-  colonnaCentrale.classList.add('col-xl-9')
-  colonnaCentrale.classList.remove('col-xl-7')
-  colonnaDestra.classList.add('d-none')
-  colonnaDestra.classList.remove('col-xl-block')
-  amici.classList.add('d-xl-block')
-})
+iconX.addEventListener("click", () => {
+  colonnaCentrale.classList.add("col-xl-9");
+  colonnaCentrale.classList.remove("col-xl-7");
+  colonnaDestra.classList.add("d-none");
+  colonnaDestra.classList.remove("col-xl-block");
+  amici.classList.add("d-xl-block");
+});
