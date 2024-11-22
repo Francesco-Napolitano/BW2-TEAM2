@@ -1,91 +1,90 @@
 class branoEvidenza {
   constructor(titolo, nomeArtista) {
-    this.titolo = titolo;
-    this.nomeArtista = nomeArtista;
+    this.titolo = titolo
+    this.nomeArtista = nomeArtista
   }
 }
 
-const tittle = document.getElementById("artistName");
-const imgBG = document.getElementById("cover");
-const params = new URLSearchParams(window.location.search);
-const idArtista = "412";
-let nomeArtista = "";
-// params.get("");
+const tittle = document.getElementById('artistName')
+const imgBG = document.getElementById('cover')
+const params = new URLSearchParams(window.location.search)
+const idArtista = params.get('id')
+let nomeArtista = ''
 
 const data = (idArtista) => {
   fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${idArtista}`)
     .then((response) => {
       if (response.ok) {
-        return response.json();
+        return response.json()
       } else {
-        throw new Error("Errore nel recupero dell'artista");
+        throw new Error("Errore nel recupero dell'artista")
       }
     })
     .then((artista) => {
-      nomeArtista = artista.name;
-      tittle.innerHTML = `${nomeArtista}`;
-      imgBG.setAttribute("src", `${artista.picture_xl}`);
-      ricercaAlbum(nomeArtista);
+      nomeArtista = artista.name
+      tittle.innerHTML = `${nomeArtista}`
+      imgBG.setAttribute('src', `${artista.picture_xl}`)
+      ricercaAlbum(nomeArtista)
     })
     .catch((error) => {
-      console.error("Errore:", error);
-    });
-};
+      console.error('Errore:', error)
+    })
+}
 
 const ricercaAlbum = function (SearchKey) {
-  const URL = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${SearchKey}`;
+  const URL = `https://striveschool-api.herokuapp.com/api/deezer/search?q=${SearchKey}`
 
   fetch(URL, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Errore nella risposta");
+        throw new Error('Errore nella risposta')
       }
-      return response.json();
+      return response.json()
     })
     .then((data) => {
-      BraniEvidenza(data.data);
-      creaRisultatiAlbum(data.data);
+      BraniEvidenza(data.data)
+      creaRisultatiAlbum(data.data)
     })
     .catch((error) => {
-      console.error("C'è stato un errore:", error.message);
-    });
-};
+      console.error("C'è stato un errore:", error.message)
+    })
+}
 
-data(idArtista);
+data(idArtista)
 
-const colonnaDestra = document.getElementById("colonna-destra");
-const colonnaCentrale = document.getElementById("colonna-centrale");
-const iconX = document.getElementById("icon-x");
-const amici = document.getElementById("amici");
+const colonnaDestra = document.getElementById('colonna-destra')
+const colonnaCentrale = document.getElementById('colonna-centrale')
+const iconX = document.getElementById('icon-x')
+const amici = document.getElementById('amici')
 
-amici.addEventListener("click", () => {
-  colonnaCentrale.classList.remove("col-xl-9");
-  colonnaCentrale.classList.add("col-xl-7");
-  colonnaDestra.classList.remove("d-none");
-  colonnaDestra.classList.add("col-xl-block");
-  amici.classList.remove("d-xl-block");
-});
+amici.addEventListener('click', () => {
+  colonnaCentrale.classList.remove('col-xl-9')
+  colonnaCentrale.classList.add('col-xl-7')
+  colonnaDestra.classList.remove('d-none')
+  colonnaDestra.classList.add('col-xl-block')
+  amici.classList.remove('d-xl-block')
+})
 
-iconX.addEventListener("click", () => {
-  colonnaCentrale.classList.add("col-xl-9");
-  colonnaCentrale.classList.remove("col-xl-7");
-  colonnaDestra.classList.add("d-none");
-  colonnaDestra.classList.remove("col-xl-block");
-  amici.classList.add("d-xl-block");
-});
+iconX.addEventListener('click', () => {
+  colonnaCentrale.classList.add('col-xl-9')
+  colonnaCentrale.classList.remove('col-xl-7')
+  colonnaDestra.classList.add('d-none')
+  colonnaDestra.classList.remove('col-xl-block')
+  amici.classList.add('d-xl-block')
+})
 
 const creaRisultatiAlbum = function (data) {
-  const albumTrovati = document.getElementById("Album");
+  const albumTrovati = document.getElementById('Album')
 
   data.forEach((element) => {
-    albumEvidenza = element;
-    const resultDiv = document.createElement("div");
-    resultDiv.className = "col-6 col-sm-6 col-md-4 col-lg-3 mb-4";
+    albumEvidenza = element
+    const resultDiv = document.createElement('div')
+    resultDiv.className = 'col-6 col-sm-6 col-md-4 col-lg-3 mb-4'
     resultDiv.innerHTML = `
             <a href="./album-page.html?=${element.album.id}" class="card-link text-decoration-none">
                  <div class="card bg-danger text-white h-100">
@@ -100,15 +99,15 @@ const creaRisultatiAlbum = function (data) {
       <p class="text-secondary fst-italic">${element.artist.name}</p>
     </div>
   </div>
-</a> `;
-    albumTrovati.appendChild(resultDiv);
-  });
-};
+</a> `
+    albumTrovati.appendChild(resultDiv)
+  })
+}
 
 const BraniEvidenza = function (brani) {
-  const rowBraniEvidenza = document.getElementById("brani");
-  const cardMusic = document.createElement("div");
-  cardMusic.classList.add("container", "d-flex", "m-4");
+  const rowBraniEvidenza = document.getElementById('brani')
+  const cardMusic = document.createElement('div')
+  cardMusic.classList.add('container', 'd-flex', 'm-4')
 
   for (i = 0; i < 3; i++) {
     rowBraniEvidenza.innerHTML += ` 
@@ -139,13 +138,13 @@ const BraniEvidenza = function (brani) {
                           <i class="heart-icon bi bi-suit-heart fs-2"></i>
                         </label>
                       </div>
-                    </div>`;
+                    </div>`
   }
 
-  const playSongs = document.querySelectorAll(".playSong");
-  console.log(brani);
-  playSongs.forEach((song , index) => {
-    const track = brani[index].preview;
-    music([song], track);
-  });
-};
+  const playSongs = document.querySelectorAll('.playSong')
+  console.log(brani)
+  playSongs.forEach((song, index) => {
+    const track = brani[index].preview
+    music([song], track)
+  })
+}
