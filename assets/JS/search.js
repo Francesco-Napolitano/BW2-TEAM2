@@ -111,3 +111,48 @@ iconX.addEventListener("click", () => {
   colonnaDestra.classList.remove("col-xl-block");
   amici.classList.add("d-xl-block");
 });
+
+const generiCantanti = [
+  (indeRock = {
+    cantante: "Motta",
+  }),
+  (altRock = {
+    cantante: "LaFee",
+  }),
+  (indiePoP = {
+    cantante: "Upsahl",
+  }),
+  (afroBeat = {
+    cantante: "BurnaBoy",
+  }),
+  (pop = {
+    cantante: "Rihanna",
+  }),
+  (chillBeat = {
+    cantante: "RyanTrey",
+  }),
+  (relaxingTunes = {
+    cantante: "Neffa",
+  }),
+  (partyPlaylist = {
+    cantante: "AnnaPepe",
+  }),
+  (studyFocus = {
+    cantante: "HansZimmer",
+  }),
+  (trap = {
+    cantante: "Ghali",
+  }),
+  (hipHop = {
+    cantante: "Ye",
+  }),
+  (darkPop = {
+    canzone: "CharliXCX",
+  }),
+  (mashUp = {
+    cantante: "AlisonWonderland",
+  }),
+  (synthwave = {
+    canzone: "CarpenterBrut",
+  }),
+];
